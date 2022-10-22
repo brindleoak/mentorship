@@ -1,0 +1,20 @@
+[0m[[0m[31merror[0m] [0m[0m[31m-- [E008] Not Found Error: C:\Users\simon\GitHub\mentorship\src\main\scala\com\simonplewis\mentorship\MentorshipRoutes.scala:39:20 [0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m39 |[0m          person <- D.get(id)[0m
+[0m[[0m[31merror[0m] [0m[0m   |                    [31m^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m   |value flatMap is not a member of cats.data.ValidatedNel[com.simonplewis.mentorship.Persons.PersonError, [0m
+[0m[[0m[31merror[0m] [0m[0m   |  F[com.simonplewis.mentorship.Persons.Person][0m
+[0m[[0m[31merror[0m] [0m[0m   |], but could be made available as an extension method.[0m
+[0m[[0m[31merror[0m] [0m[0m   |[0m
+[0m[[0m[31merror[0m] [0m[0m   |One of the following imports might make progress towards fixing the problem:[0m
+[0m[[0m[31merror[0m] [0m[0m   |[0m
+[0m[[0m[31merror[0m] [0m[0m   |  import cats.Bimonad.ops.toAllBimonadOps[0m
+[0m[[0m[31merror[0m] [0m[0m   |  import cats.CommutativeFlatMap.ops.toAllCommutativeFlatMapOps[0m
+[0m[[0m[31merror[0m] [0m[0m   |  import cats.CommutativeMonad.ops.toAllCommutativeMonadOps[0m
+[0m[[0m[31merror[0m] [0m[0m   |  import cats.FlatMap.ops.toAllFlatMapOps[0m
+[0m[[0m[31merror[0m] [0m[0m   |  import cats.Monad.ops.toAllMonadOps[0m
+[0m[[0m[31merror[0m] [0m[0m   |[0m
+[0m[[0m[31merror[0m] [0m[0m   |[0m
+[0m[[0m[31merror[0m] [0m[0m   |[0m
+[0m[[0m[31merror[0m] [0m[0m   |where:    F is a type in [33mmethod[0m [35mpersonRoutes[0m with bounds <: [_] =>> Any[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
