@@ -38,14 +38,7 @@ object MentorshipRoutes:
     import dsl._
     HttpRoutes.of[F] {
       case GET -> Root / "person" / "get" /  id =>
-        val person = p.get(id)
+        val person = p.get(id.toInt)
         val greeting = p.hello(person)
         Ok(greeting)
-
-        //Ok.apply(p.hello(p.get(id)))
-        //for {
-        //  person <- p.get(id)
-        //  greeting <- p.hello(person)
-        //  resp <- Ok(greeting)
-        //} yield resp
     }

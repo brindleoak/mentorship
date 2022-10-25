@@ -14,11 +14,12 @@ import org.http4s.Method._
 import cats.Applicative
 import cats.MonadError
 import cats.Monad
+import com.simonplewis.mentorship.models.*
 
 type ValidatedPerson[A] = Validated[Persons.PersonError, A]
 
 trait Persons[F[_]]:
-  def get(id: String): ValidatedPerson[Persons.Person]
+  def get(id: Int): ValidatedPerson[Persons.Person]
   def hello(validatedPerson: ValidatedPerson[Persons.Person]): F[Persons.Greeting]
 
 object Persons:
@@ -40,10 +41,9 @@ object Persons:
   final case class PersonError(error: String)
 
   def impl[F[_] : Applicative]: Persons[F] = new Persons[F]:
-    def get(id: String): ValidatedPerson[Person] = id match  // to be replaced with MySQL lookup
-      case "1" => Person(1, "Simon", 56, "simon.p.lewis@outlook.com").valid
-      case "2" => Person(1, "Elena", 22, "elena.lewis@outlook.com").valid
-      case x => PersonError("No such person: " + id).invalid
+    def get(id: Int): ValidatedPerson[Person] = PersonDb.find(id) match  // to be replaced with MySQL lookup
+      case Some(p) => Person(1, "Simon", 56, "simon.p.lewis@outlook.com").valid
+      case None => PersonError("No such person: " + id).invalid
       
     def hello(validatedPerson: ValidatedPerson[Person]): F[Greeting] = validatedPerson match
       case Invalid(er) => Greeting(er.error).pure[F]

@@ -2,69 +2,80 @@
     "version": "1.4.0",
     "project": {
         "name": "root-test",
-        "directory": "C:\\Users\\simon\\GitHub\\mentorship",
-        "workspaceDir": "C:\\Users\\simon\\GitHub\\mentorship",
+        "directory": "/home/simonlewis/GitHub/mentorship",
+        "workspaceDir": "/home/simonlewis/GitHub/mentorship",
         "sources": [
-            "C:\\Users\\simon\\GitHub\\mentorship\\src\\test\\scala",
-            "C:\\Users\\simon\\GitHub\\mentorship\\src\\test\\scala-3",
-            "C:\\Users\\simon\\GitHub\\mentorship\\src\\test\\java",
-            "C:\\Users\\simon\\GitHub\\mentorship\\target\\scala-3.1.0\\src_managed\\test"
+            "/home/simonlewis/GitHub/mentorship/src/test/scala",
+            "/home/simonlewis/GitHub/mentorship/src/test/scala-3",
+            "/home/simonlewis/GitHub/mentorship/src/test/java",
+            "/home/simonlewis/GitHub/mentorship/target/scala-3.1.0/src_managed/test"
         ],
         "dependencies": [
             "root"
         ],
         "classpath": [
-            "C:\\Users\\simon\\GitHub\\mentorship\\.bloop\\root\\scala-3\\classes",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala3-library_3\\3.1.0\\scala3-library_3-3.1.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-server_3\\1.0.0-M29\\http4s-ember-server_3-1.0.0-M29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-client_3\\1.0.0-M29\\http4s-ember-client_3-1.0.0-M29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-circe_3\\1.0.0-M29\\http4s-circe_3-1.0.0-M29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-dsl_3\\1.0.0-M29\\http4s-dsl_3-1.0.0-M29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalameta\\munit_3\\0.7.29\\munit_3-0.7.29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\munit-cats-effect-3_3\\1.0.7\\munit-cats-effect-3_3-1.0.7.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-classic\\1.4.4\\logback-classic-1.4.4.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-core_3\\1.0.0-M29\\http4s-ember-core_3-1.0.0-M29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-server_3\\1.0.0-M29\\http4s-server_3-1.0.0-M29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\log4cats-slf4j_3\\2.1.1\\log4cats-slf4j_3-2.1.1.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-client_3\\1.0.0-M29\\http4s-client_3-1.0.0-M29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\keypool_3\\0.4.7\\keypool_3-0.4.7.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-core_3\\1.0.0-M29\\http4s-core_3-1.0.0-M29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-jawn_3\\1.0.0-M29\\http4s-jawn_3-1.0.0-M29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-core_3\\0.15.0-M1\\circe-core_3-0.15.0-M1.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-jawn_3\\0.15.0-M1\\circe-jawn_3-0.15.0-M1.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalameta\\junit-interface\\0.7.29\\junit-interface-0.7.29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\junit\\junit\\4.13.2\\junit-4.13.2.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect_3\\3.3.0\\cats-effect_3-3.3.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-core\\1.4.4\\logback-core-1.4.4.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\2.0.1\\slf4j-api-2.0.1.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\log4cats-core_3\\2.1.1\\log4cats-core_3-2.1.1.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-core_3\\2.7.0\\cats-core_3-2.7.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect-kernel_3\\3.3.0\\cats-effect-kernel_3-3.3.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\case-insensitive_3\\1.1.4\\case-insensitive_3-1.1.4.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect-std_3\\3.3.0\\cats-effect-std_3-3.3.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-parse_3\\0.3.4\\cats-parse_3-0.3.4.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-crypto_3\\0.2.0\\http4s-crypto_3-0.2.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\co\\fs2\\fs2-core_3\\3.1.5\\fs2-core_3-3.1.5.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\co\\fs2\\fs2-io_3\\3.1.5\\fs2-io_3-3.1.5.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\comcast\\ip4s-core_3\\3.0.4\\ip4s-core_3-3.0.4.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\literally_3\\1.0.2\\literally_3-1.0.2.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\log4s\\log4s_3\\1.10.0\\log4s_3-1.10.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scodec\\scodec-bits_3\\1.1.29\\scodec-bits_3-1.1.29.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\vault_3\\3.1.0\\vault_3-3.1.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\jawn-fs2_3\\2.1.0\\jawn-fs2_3-2.1.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\jawn-parser_3\\1.2.0\\jawn-parser_3-1.2.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-numbers_3\\0.15.0-M1\\circe-numbers_3-0.15.0-M1.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-interface\\1.0\\test-interface-1.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-kernel_3\\2.7.0\\cats-kernel_3-2.7.0.jar",
-            "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\simulacrum-scalafix-annotations_3\\0.5.4\\simulacrum-scalafix-annotations_3-0.5.4.jar"
+            "/home/simonlewis/GitHub/mentorship/.bloop/root/scala-3/classes",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.1.0/scala3-library_3-3.1.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-ember-server_3/1.0.0-M29/http4s-ember-server_3-1.0.0-M29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-ember-client_3/1.0.0-M29/http4s-ember-client_3-1.0.0-M29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-circe_3/1.0.0-M29/http4s-circe_3-1.0.0-M29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-dsl_3/1.0.0-M29/http4s-dsl_3-1.0.0-M29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/munit_3/0.7.29/munit_3-0.7.29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/munit-cats-effect-3_3/1.0.7/munit-cats-effect-3_3-1.0.7.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.4.4/logback-classic-1.4.4.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc_3/4.0.0/scalikejdbc_3-4.0.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-test_3/4.0.0/scalikejdbc-test_3-4.0.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.12/mysql-connector-java-5.1.12.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.6/scala-library-2.13.6.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-ember-core_3/1.0.0-M29/http4s-ember-core_3-1.0.0-M29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-server_3/1.0.0-M29/http4s-server_3-1.0.0-M29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/log4cats-slf4j_3/2.1.1/log4cats-slf4j_3-2.1.1.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-client_3/1.0.0-M29/http4s-client_3-1.0.0-M29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/keypool_3/0.4.7/keypool_3-0.4.7.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-core_3/1.0.0-M29/http4s-core_3-1.0.0-M29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-jawn_3/1.0.0-M29/http4s-jawn_3-1.0.0-M29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-core_3/0.15.0-M1/circe-core_3-0.15.0-M1.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-jawn_3/0.15.0-M1/circe-jawn_3-0.15.0-M1.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/junit-interface/0.7.29/junit-interface-0.7.29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect_3/3.3.0/cats-effect_3-3.3.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-core/1.4.4/logback-core-1.4.4.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.1/slf4j-api-2.0.1.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-core_3/4.0.0/scalikejdbc-core_3-4.0.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-interpolation_3/4.0.0/scalikejdbc-interpolation_3-4.0.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/log4cats-core_3/2.1.1/log4cats-core_3-2.1.1.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_3/2.7.0/cats-core_3-2.7.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect-kernel_3/3.3.0/cats-effect-kernel_3-3.3.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/case-insensitive_3/1.1.4/case-insensitive_3-1.1.4.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect-std_3/3.3.0/cats-effect-std_3-3.3.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-parse_3/0.3.4/cats-parse_3-0.3.4.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-crypto_3/0.2.0/http4s-crypto_3-0.2.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/co/fs2/fs2-core_3/3.1.5/fs2-core_3-3.1.5.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/co/fs2/fs2-io_3/3.1.5/fs2-io_3-3.1.5.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/comcast/ip4s-core_3/3.0.4/ip4s-core_3-3.0.4.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/literally_3/1.0.2/literally_3-1.0.2.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/log4s/log4s_3/1.10.0/log4s_3-1.10.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scodec/scodec-bits_3/1.1.29/scodec-bits_3-1.1.29.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/vault_3/3.1.0/vault_3-3.1.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/jawn-fs2_3/2.1.0/jawn-fs2_3-2.1.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/jawn-parser_3/1.2.0/jawn-parser_3-1.2.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-numbers_3/0.15.0-M1/circe-numbers_3-0.15.0-M1.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-dbcp2/2.9.0/commons-dbcp2-2.9.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_3/2.1.0/scala-parser-combinators_3-2.1.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_3/2.5.0/scala-collection-compat_3-2.5.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-interpolation-macro_3/4.0.0/scalikejdbc-interpolation-macro_3-4.0.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_3/2.7.0/cats-kernel_3-2.7.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/simulacrum-scalafix-annotations_3/0.5.4/simulacrum-scalafix-annotations_3-0.5.4.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.10.0/commons-pool2-2.10.0.jar",
+            "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"
         ],
-        "out": "C:\\Users\\simon\\GitHub\\mentorship\\.bloop\\root",
-        "classesDir": "C:\\Users\\simon\\GitHub\\mentorship\\.bloop\\root\\scala-3\\test-classes",
+        "out": "/home/simonlewis/GitHub/mentorship/.bloop/root",
+        "classesDir": "/home/simonlewis/GitHub/mentorship/.bloop/root/scala-3/test-classes",
         "resources": [
-            "C:\\Users\\simon\\GitHub\\mentorship\\src\\test\\resources",
-            "C:\\Users\\simon\\GitHub\\mentorship\\target\\scala-3.1.0\\resource_managed\\test"
+            "/home/simonlewis/GitHub/mentorship/src/test/resources",
+            "/home/simonlewis/GitHub/mentorship/target/scala-3.1.0/resource_managed/test"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -75,48 +86,48 @@
                 "utf8"
             ],
             "jars": [
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala3-library_3\\3.1.0\\scala3-library_3-3.1.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala3-compiler_3\\3.1.0\\scala3-compiler_3-3.1.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala3-interfaces\\3.1.0\\scala3-interfaces-3.1.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\tasty-core_3\\3.1.0\\tasty-core_3-3.1.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-asm\\9.1.0-scala-1\\scala-asm-9.1.0-scala-1.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\compiler-interface\\1.3.5\\compiler-interface-1.3.5.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-reader\\3.19.0\\jline-reader-3.19.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-terminal\\3.19.0\\jline-terminal-3.19.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-terminal-jna\\3.19.0\\jline-terminal-jna-3.19.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\google\\protobuf\\protobuf-java\\3.7.0\\protobuf-java-3.7.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-interface\\1.3.0\\util-interface-1.3.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\net\\java\\dev\\jna\\jna\\5.3.1\\jna-5.3.1.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scaladoc_3\\3.1.0\\scaladoc_3-3.1.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala3-tasty-inspector_3\\3.1.0\\scala3-tasty-inspector_3-3.1.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark\\0.42.12\\flexmark-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-html-parser\\0.42.12\\flexmark-html-parser-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-ext-anchorlink\\0.42.12\\flexmark-ext-anchorlink-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-ext-autolink\\0.42.12\\flexmark-ext-autolink-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-ext-emoji\\0.42.12\\flexmark-ext-emoji-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-ext-gfm-strikethrough\\0.42.12\\flexmark-ext-gfm-strikethrough-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-ext-gfm-tables\\0.42.12\\flexmark-ext-gfm-tables-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-ext-gfm-tasklist\\0.42.12\\flexmark-ext-gfm-tasklist-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-ext-wikilink\\0.42.12\\flexmark-ext-wikilink-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-ext-yaml-front-matter\\0.42.12\\flexmark-ext-yaml-front-matter-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\nl\\big-o\\liqp\\0.6.7\\liqp-0.6.7.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jsoup\\jsoup\\1.13.1\\jsoup-1.13.1.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-yaml\\2.9.8\\jackson-dataformat-yaml-2.9.8.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-util\\0.42.12\\flexmark-util-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-formatter\\0.42.12\\flexmark-formatter-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\nibor\\autolink\\autolink\\0.6.0\\autolink-0.6.0.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-jira-converter\\0.42.12\\flexmark-jira-converter-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\antlr\\antlr\\3.5.1\\antlr-3.5.1.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\fasterxml\\jackson\\core\\jackson-annotations\\2.2.3\\jackson-annotations-2.2.3.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\fasterxml\\jackson\\core\\jackson-core\\2.9.8\\jackson-core-2.9.8.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.2.3\\jackson-databind-2.2.3.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\yaml\\snakeyaml\\1.23\\snakeyaml-1.23.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-ext-tables\\0.42.12\\flexmark-ext-tables-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-ext-ins\\0.42.12\\flexmark-ext-ins-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\vladsch\\flexmark\\flexmark-ext-superscript\\0.42.12\\flexmark-ext-superscript-0.42.12.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\antlr\\antlr-runtime\\3.5.1\\antlr-runtime-3.5.1.jar",
-                "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\antlr\\ST4\\4.0.7\\ST4-4.0.7.jar"
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.1.0/scala3-library_3-3.1.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.6/scala-library-2.13.6.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/3.1.0/scala3-compiler_3-3.1.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-interfaces/3.1.0/scala3-interfaces-3.1.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/tasty-core_3/3.1.0/tasty-core_3-3.1.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-asm/9.1.0-scala-1/scala-asm-9.1.0-scala-1.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-interface/1.3.5/compiler-interface-1.3.5.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-reader/3.19.0/jline-reader-3.19.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal/3.19.0/jline-terminal-3.19.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jna/3.19.0/jline-terminal-jna-3.19.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.7.0/protobuf-java-3.7.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-interface/1.3.0/util-interface-1.3.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scaladoc_3/3.1.0/scaladoc_3-3.1.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-tasty-inspector_3/3.1.0/scala3-tasty-inspector_3-3.1.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark/0.42.12/flexmark-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-html-parser/0.42.12/flexmark-html-parser-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-ext-anchorlink/0.42.12/flexmark-ext-anchorlink-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-ext-autolink/0.42.12/flexmark-ext-autolink-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-ext-emoji/0.42.12/flexmark-ext-emoji-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-ext-gfm-strikethrough/0.42.12/flexmark-ext-gfm-strikethrough-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-ext-gfm-tables/0.42.12/flexmark-ext-gfm-tables-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-ext-gfm-tasklist/0.42.12/flexmark-ext-gfm-tasklist-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-ext-wikilink/0.42.12/flexmark-ext-wikilink-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-ext-yaml-front-matter/0.42.12/flexmark-ext-yaml-front-matter-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/nl/big-o/liqp/0.6.7/liqp-0.6.7.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jsoup/jsoup/1.13.1/jsoup-1.13.1.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.8/jackson-dataformat-yaml-2.9.8.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-util/0.42.12/flexmark-util-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-formatter/0.42.12/flexmark-formatter-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/nibor/autolink/autolink/0.6.0/autolink-0.6.0.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-jira-converter/0.42.12/flexmark-jira-converter-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/antlr/antlr/3.5.1/antlr-3.5.1.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.3/jackson-annotations-2.2.3.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.3/jackson-databind-2.2.3.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-ext-tables/0.42.12/flexmark-ext-tables-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-ext-ins/0.42.12/flexmark-ext-ins-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-ext-superscript/0.42.12/flexmark-ext-superscript-0.42.12.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/antlr/antlr-runtime/3.5.1/antlr-runtime-3.5.1.jar",
+                "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/antlr/ST4/4.0.7/ST4-4.0.7.jar"
             ],
             "setup": {
                 "order": "mixed",
@@ -184,9 +195,9 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "C:\\Users\\simon\\.jdks\\openjdk-19",
+                "home": "/usr/lib/jvm/java-11-openjdk-amd64",
                 "options": [
-                    "-Duser.dir=C:\\Users\\simon\\GitHub\\mentorship"
+                    "-Duser.dir=/home/simonlewis/GitHub/mentorship"
                 ]
             },
             "mainClass": [
@@ -203,17 +214,12 @@
                     "artifacts": [
                         {
                             "name": "scala3-library_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala3-library_3\\3.1.0\\scala3-library_3-3.1.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.1.0/scala3-library_3-3.1.0.jar"
                         },
                         {
                             "name": "scala3-library_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala3-library_3\\3.1.0\\scala3-library_3-3.1.0-sources.jar"
-                        },
-                        {
-                            "name": "scala3-library_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala3-library_3\\3.1.0\\scala3-library_3-3.1.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.1.0/scala3-library_3-3.1.0-sources.jar"
                         }
                     ]
                 },
@@ -225,17 +231,12 @@
                     "artifacts": [
                         {
                             "name": "http4s-ember-server_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-server_3\\1.0.0-M29\\http4s-ember-server_3-1.0.0-M29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-ember-server_3/1.0.0-M29/http4s-ember-server_3-1.0.0-M29.jar"
                         },
                         {
                             "name": "http4s-ember-server_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-server_3\\1.0.0-M29\\http4s-ember-server_3-1.0.0-M29-sources.jar"
-                        },
-                        {
-                            "name": "http4s-ember-server_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-server_3\\1.0.0-M29\\http4s-ember-server_3-1.0.0-M29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-ember-server_3/1.0.0-M29/http4s-ember-server_3-1.0.0-M29-sources.jar"
                         }
                     ]
                 },
@@ -247,17 +248,12 @@
                     "artifacts": [
                         {
                             "name": "http4s-ember-client_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-client_3\\1.0.0-M29\\http4s-ember-client_3-1.0.0-M29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-ember-client_3/1.0.0-M29/http4s-ember-client_3-1.0.0-M29.jar"
                         },
                         {
                             "name": "http4s-ember-client_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-client_3\\1.0.0-M29\\http4s-ember-client_3-1.0.0-M29-sources.jar"
-                        },
-                        {
-                            "name": "http4s-ember-client_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-client_3\\1.0.0-M29\\http4s-ember-client_3-1.0.0-M29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-ember-client_3/1.0.0-M29/http4s-ember-client_3-1.0.0-M29-sources.jar"
                         }
                     ]
                 },
@@ -269,17 +265,12 @@
                     "artifacts": [
                         {
                             "name": "http4s-circe_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-circe_3\\1.0.0-M29\\http4s-circe_3-1.0.0-M29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-circe_3/1.0.0-M29/http4s-circe_3-1.0.0-M29.jar"
                         },
                         {
                             "name": "http4s-circe_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-circe_3\\1.0.0-M29\\http4s-circe_3-1.0.0-M29-sources.jar"
-                        },
-                        {
-                            "name": "http4s-circe_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-circe_3\\1.0.0-M29\\http4s-circe_3-1.0.0-M29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-circe_3/1.0.0-M29/http4s-circe_3-1.0.0-M29-sources.jar"
                         }
                     ]
                 },
@@ -291,17 +282,12 @@
                     "artifacts": [
                         {
                             "name": "http4s-dsl_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-dsl_3\\1.0.0-M29\\http4s-dsl_3-1.0.0-M29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-dsl_3/1.0.0-M29/http4s-dsl_3-1.0.0-M29.jar"
                         },
                         {
                             "name": "http4s-dsl_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-dsl_3\\1.0.0-M29\\http4s-dsl_3-1.0.0-M29-sources.jar"
-                        },
-                        {
-                            "name": "http4s-dsl_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-dsl_3\\1.0.0-M29\\http4s-dsl_3-1.0.0-M29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-dsl_3/1.0.0-M29/http4s-dsl_3-1.0.0-M29-sources.jar"
                         }
                     ]
                 },
@@ -313,17 +299,41 @@
                     "artifacts": [
                         {
                             "name": "logback-classic",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-classic\\1.4.4\\logback-classic-1.4.4.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.4.4/logback-classic-1.4.4.jar"
                         },
                         {
                             "name": "logback-classic",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-classic\\1.4.4\\logback-classic-1.4.4-sources.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.4.4/logback-classic-1.4.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalikejdbc",
+                    "name": "scalikejdbc_3",
+                    "version": "4.0.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalikejdbc_3",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc_3/4.0.0/scalikejdbc_3-4.0.0.jar"
                         },
                         {
-                            "name": "logback-classic",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-classic\\1.4.4\\logback-classic-1.4.4-javadoc.jar"
+                            "name": "scalikejdbc_3",
+                            "classifier": "sources",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc_3/4.0.0/scalikejdbc_3-4.0.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "mysql",
+                    "name": "mysql-connector-java",
+                    "version": "5.1.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "mysql-connector-java",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.12/mysql-connector-java-5.1.12.jar"
                         }
                     ]
                 },
@@ -335,17 +345,12 @@
                     "artifacts": [
                         {
                             "name": "scala-library",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.6/scala-library-2.13.6.jar"
                         },
                         {
                             "name": "scala-library",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6-sources.jar"
-                        },
-                        {
-                            "name": "scala-library",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.6\\scala-library-2.13.6-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.6/scala-library-2.13.6-sources.jar"
                         }
                     ]
                 },
@@ -357,17 +362,12 @@
                     "artifacts": [
                         {
                             "name": "http4s-ember-core_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-core_3\\1.0.0-M29\\http4s-ember-core_3-1.0.0-M29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-ember-core_3/1.0.0-M29/http4s-ember-core_3-1.0.0-M29.jar"
                         },
                         {
                             "name": "http4s-ember-core_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-core_3\\1.0.0-M29\\http4s-ember-core_3-1.0.0-M29-sources.jar"
-                        },
-                        {
-                            "name": "http4s-ember-core_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-ember-core_3\\1.0.0-M29\\http4s-ember-core_3-1.0.0-M29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-ember-core_3/1.0.0-M29/http4s-ember-core_3-1.0.0-M29-sources.jar"
                         }
                     ]
                 },
@@ -379,17 +379,12 @@
                     "artifacts": [
                         {
                             "name": "http4s-server_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-server_3\\1.0.0-M29\\http4s-server_3-1.0.0-M29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-server_3/1.0.0-M29/http4s-server_3-1.0.0-M29.jar"
                         },
                         {
                             "name": "http4s-server_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-server_3\\1.0.0-M29\\http4s-server_3-1.0.0-M29-sources.jar"
-                        },
-                        {
-                            "name": "http4s-server_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-server_3\\1.0.0-M29\\http4s-server_3-1.0.0-M29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-server_3/1.0.0-M29/http4s-server_3-1.0.0-M29-sources.jar"
                         }
                     ]
                 },
@@ -401,17 +396,12 @@
                     "artifacts": [
                         {
                             "name": "log4cats-slf4j_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\log4cats-slf4j_3\\2.1.1\\log4cats-slf4j_3-2.1.1.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/log4cats-slf4j_3/2.1.1/log4cats-slf4j_3-2.1.1.jar"
                         },
                         {
                             "name": "log4cats-slf4j_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\log4cats-slf4j_3\\2.1.1\\log4cats-slf4j_3-2.1.1-sources.jar"
-                        },
-                        {
-                            "name": "log4cats-slf4j_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\log4cats-slf4j_3\\2.1.1\\log4cats-slf4j_3-2.1.1-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/log4cats-slf4j_3/2.1.1/log4cats-slf4j_3-2.1.1-sources.jar"
                         }
                     ]
                 },
@@ -423,17 +413,12 @@
                     "artifacts": [
                         {
                             "name": "http4s-client_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-client_3\\1.0.0-M29\\http4s-client_3-1.0.0-M29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-client_3/1.0.0-M29/http4s-client_3-1.0.0-M29.jar"
                         },
                         {
                             "name": "http4s-client_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-client_3\\1.0.0-M29\\http4s-client_3-1.0.0-M29-sources.jar"
-                        },
-                        {
-                            "name": "http4s-client_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-client_3\\1.0.0-M29\\http4s-client_3-1.0.0-M29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-client_3/1.0.0-M29/http4s-client_3-1.0.0-M29-sources.jar"
                         }
                     ]
                 },
@@ -445,17 +430,12 @@
                     "artifacts": [
                         {
                             "name": "keypool_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\keypool_3\\0.4.7\\keypool_3-0.4.7.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/keypool_3/0.4.7/keypool_3-0.4.7.jar"
                         },
                         {
                             "name": "keypool_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\keypool_3\\0.4.7\\keypool_3-0.4.7-sources.jar"
-                        },
-                        {
-                            "name": "keypool_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\keypool_3\\0.4.7\\keypool_3-0.4.7-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/keypool_3/0.4.7/keypool_3-0.4.7-sources.jar"
                         }
                     ]
                 },
@@ -467,17 +447,12 @@
                     "artifacts": [
                         {
                             "name": "http4s-core_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-core_3\\1.0.0-M29\\http4s-core_3-1.0.0-M29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-core_3/1.0.0-M29/http4s-core_3-1.0.0-M29.jar"
                         },
                         {
                             "name": "http4s-core_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-core_3\\1.0.0-M29\\http4s-core_3-1.0.0-M29-sources.jar"
-                        },
-                        {
-                            "name": "http4s-core_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-core_3\\1.0.0-M29\\http4s-core_3-1.0.0-M29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-core_3/1.0.0-M29/http4s-core_3-1.0.0-M29-sources.jar"
                         }
                     ]
                 },
@@ -489,17 +464,12 @@
                     "artifacts": [
                         {
                             "name": "http4s-jawn_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-jawn_3\\1.0.0-M29\\http4s-jawn_3-1.0.0-M29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-jawn_3/1.0.0-M29/http4s-jawn_3-1.0.0-M29.jar"
                         },
                         {
                             "name": "http4s-jawn_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-jawn_3\\1.0.0-M29\\http4s-jawn_3-1.0.0-M29-sources.jar"
-                        },
-                        {
-                            "name": "http4s-jawn_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-jawn_3\\1.0.0-M29\\http4s-jawn_3-1.0.0-M29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-jawn_3/1.0.0-M29/http4s-jawn_3-1.0.0-M29-sources.jar"
                         }
                     ]
                 },
@@ -511,17 +481,12 @@
                     "artifacts": [
                         {
                             "name": "circe-core_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-core_3\\0.15.0-M1\\circe-core_3-0.15.0-M1.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-core_3/0.15.0-M1/circe-core_3-0.15.0-M1.jar"
                         },
                         {
                             "name": "circe-core_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-core_3\\0.15.0-M1\\circe-core_3-0.15.0-M1-sources.jar"
-                        },
-                        {
-                            "name": "circe-core_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-core_3\\0.15.0-M1\\circe-core_3-0.15.0-M1-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-core_3/0.15.0-M1/circe-core_3-0.15.0-M1-sources.jar"
                         }
                     ]
                 },
@@ -533,17 +498,12 @@
                     "artifacts": [
                         {
                             "name": "circe-jawn_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-jawn_3\\0.15.0-M1\\circe-jawn_3-0.15.0-M1.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-jawn_3/0.15.0-M1/circe-jawn_3-0.15.0-M1.jar"
                         },
                         {
                             "name": "circe-jawn_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-jawn_3\\0.15.0-M1\\circe-jawn_3-0.15.0-M1-sources.jar"
-                        },
-                        {
-                            "name": "circe-jawn_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-jawn_3\\0.15.0-M1\\circe-jawn_3-0.15.0-M1-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-jawn_3/0.15.0-M1/circe-jawn_3-0.15.0-M1-sources.jar"
                         }
                     ]
                 },
@@ -555,17 +515,12 @@
                     "artifacts": [
                         {
                             "name": "logback-core",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-core\\1.4.4\\logback-core-1.4.4.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-core/1.4.4/logback-core-1.4.4.jar"
                         },
                         {
                             "name": "logback-core",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-core\\1.4.4\\logback-core-1.4.4-sources.jar"
-                        },
-                        {
-                            "name": "logback-core",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-core\\1.4.4\\logback-core-1.4.4-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-core/1.4.4/logback-core-1.4.4-sources.jar"
                         }
                     ]
                 },
@@ -577,17 +532,46 @@
                     "artifacts": [
                         {
                             "name": "slf4j-api",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\2.0.1\\slf4j-api-2.0.1.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.1/slf4j-api-2.0.1.jar"
                         },
                         {
                             "name": "slf4j-api",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\2.0.1\\slf4j-api-2.0.1-sources.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.1/slf4j-api-2.0.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalikejdbc",
+                    "name": "scalikejdbc-core_3",
+                    "version": "4.0.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalikejdbc-core_3",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-core_3/4.0.0/scalikejdbc-core_3-4.0.0.jar"
                         },
                         {
-                            "name": "slf4j-api",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\2.0.1\\slf4j-api-2.0.1-javadoc.jar"
+                            "name": "scalikejdbc-core_3",
+                            "classifier": "sources",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-core_3/4.0.0/scalikejdbc-core_3-4.0.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalikejdbc",
+                    "name": "scalikejdbc-interpolation_3",
+                    "version": "4.0.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalikejdbc-interpolation_3",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-interpolation_3/4.0.0/scalikejdbc-interpolation_3-4.0.0.jar"
+                        },
+                        {
+                            "name": "scalikejdbc-interpolation_3",
+                            "classifier": "sources",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-interpolation_3/4.0.0/scalikejdbc-interpolation_3-4.0.0-sources.jar"
                         }
                     ]
                 },
@@ -599,17 +583,12 @@
                     "artifacts": [
                         {
                             "name": "log4cats-core_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\log4cats-core_3\\2.1.1\\log4cats-core_3-2.1.1.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/log4cats-core_3/2.1.1/log4cats-core_3-2.1.1.jar"
                         },
                         {
                             "name": "log4cats-core_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\log4cats-core_3\\2.1.1\\log4cats-core_3-2.1.1-sources.jar"
-                        },
-                        {
-                            "name": "log4cats-core_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\log4cats-core_3\\2.1.1\\log4cats-core_3-2.1.1-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/log4cats-core_3/2.1.1/log4cats-core_3-2.1.1-sources.jar"
                         }
                     ]
                 },
@@ -621,17 +600,12 @@
                     "artifacts": [
                         {
                             "name": "case-insensitive_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\case-insensitive_3\\1.1.4\\case-insensitive_3-1.1.4.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/case-insensitive_3/1.1.4/case-insensitive_3-1.1.4.jar"
                         },
                         {
                             "name": "case-insensitive_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\case-insensitive_3\\1.1.4\\case-insensitive_3-1.1.4-sources.jar"
-                        },
-                        {
-                            "name": "case-insensitive_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\case-insensitive_3\\1.1.4\\case-insensitive_3-1.1.4-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/case-insensitive_3/1.1.4/case-insensitive_3-1.1.4-sources.jar"
                         }
                     ]
                 },
@@ -643,17 +617,12 @@
                     "artifacts": [
                         {
                             "name": "cats-parse_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-parse_3\\0.3.4\\cats-parse_3-0.3.4.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-parse_3/0.3.4/cats-parse_3-0.3.4.jar"
                         },
                         {
                             "name": "cats-parse_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-parse_3\\0.3.4\\cats-parse_3-0.3.4-sources.jar"
-                        },
-                        {
-                            "name": "cats-parse_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-parse_3\\0.3.4\\cats-parse_3-0.3.4-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-parse_3/0.3.4/cats-parse_3-0.3.4-sources.jar"
                         }
                     ]
                 },
@@ -665,17 +634,12 @@
                     "artifacts": [
                         {
                             "name": "http4s-crypto_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-crypto_3\\0.2.0\\http4s-crypto_3-0.2.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-crypto_3/0.2.0/http4s-crypto_3-0.2.0.jar"
                         },
                         {
                             "name": "http4s-crypto_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-crypto_3\\0.2.0\\http4s-crypto_3-0.2.0-sources.jar"
-                        },
-                        {
-                            "name": "http4s-crypto_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\http4s\\http4s-crypto_3\\0.2.0\\http4s-crypto_3-0.2.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/http4s/http4s-crypto_3/0.2.0/http4s-crypto_3-0.2.0-sources.jar"
                         }
                     ]
                 },
@@ -687,17 +651,12 @@
                     "artifacts": [
                         {
                             "name": "fs2-core_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\co\\fs2\\fs2-core_3\\3.1.5\\fs2-core_3-3.1.5.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/co/fs2/fs2-core_3/3.1.5/fs2-core_3-3.1.5.jar"
                         },
                         {
                             "name": "fs2-core_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\co\\fs2\\fs2-core_3\\3.1.5\\fs2-core_3-3.1.5-sources.jar"
-                        },
-                        {
-                            "name": "fs2-core_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\co\\fs2\\fs2-core_3\\3.1.5\\fs2-core_3-3.1.5-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/co/fs2/fs2-core_3/3.1.5/fs2-core_3-3.1.5-sources.jar"
                         }
                     ]
                 },
@@ -709,17 +668,12 @@
                     "artifacts": [
                         {
                             "name": "fs2-io_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\co\\fs2\\fs2-io_3\\3.1.5\\fs2-io_3-3.1.5.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/co/fs2/fs2-io_3/3.1.5/fs2-io_3-3.1.5.jar"
                         },
                         {
                             "name": "fs2-io_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\co\\fs2\\fs2-io_3\\3.1.5\\fs2-io_3-3.1.5-sources.jar"
-                        },
-                        {
-                            "name": "fs2-io_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\co\\fs2\\fs2-io_3\\3.1.5\\fs2-io_3-3.1.5-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/co/fs2/fs2-io_3/3.1.5/fs2-io_3-3.1.5-sources.jar"
                         }
                     ]
                 },
@@ -731,17 +685,12 @@
                     "artifacts": [
                         {
                             "name": "ip4s-core_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\comcast\\ip4s-core_3\\3.0.4\\ip4s-core_3-3.0.4.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/comcast/ip4s-core_3/3.0.4/ip4s-core_3-3.0.4.jar"
                         },
                         {
                             "name": "ip4s-core_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\comcast\\ip4s-core_3\\3.0.4\\ip4s-core_3-3.0.4-sources.jar"
-                        },
-                        {
-                            "name": "ip4s-core_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\comcast\\ip4s-core_3\\3.0.4\\ip4s-core_3-3.0.4-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/com/comcast/ip4s-core_3/3.0.4/ip4s-core_3-3.0.4-sources.jar"
                         }
                     ]
                 },
@@ -753,17 +702,12 @@
                     "artifacts": [
                         {
                             "name": "literally_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\literally_3\\1.0.2\\literally_3-1.0.2.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/literally_3/1.0.2/literally_3-1.0.2.jar"
                         },
                         {
                             "name": "literally_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\literally_3\\1.0.2\\literally_3-1.0.2-sources.jar"
-                        },
-                        {
-                            "name": "literally_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\literally_3\\1.0.2\\literally_3-1.0.2-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/literally_3/1.0.2/literally_3-1.0.2-sources.jar"
                         }
                     ]
                 },
@@ -775,17 +719,12 @@
                     "artifacts": [
                         {
                             "name": "log4s_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\log4s\\log4s_3\\1.10.0\\log4s_3-1.10.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/log4s/log4s_3/1.10.0/log4s_3-1.10.0.jar"
                         },
                         {
                             "name": "log4s_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\log4s\\log4s_3\\1.10.0\\log4s_3-1.10.0-sources.jar"
-                        },
-                        {
-                            "name": "log4s_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\log4s\\log4s_3\\1.10.0\\log4s_3-1.10.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/log4s/log4s_3/1.10.0/log4s_3-1.10.0-sources.jar"
                         }
                     ]
                 },
@@ -797,17 +736,12 @@
                     "artifacts": [
                         {
                             "name": "scodec-bits_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scodec\\scodec-bits_3\\1.1.29\\scodec-bits_3-1.1.29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scodec/scodec-bits_3/1.1.29/scodec-bits_3-1.1.29.jar"
                         },
                         {
                             "name": "scodec-bits_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scodec\\scodec-bits_3\\1.1.29\\scodec-bits_3-1.1.29-sources.jar"
-                        },
-                        {
-                            "name": "scodec-bits_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scodec\\scodec-bits_3\\1.1.29\\scodec-bits_3-1.1.29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scodec/scodec-bits_3/1.1.29/scodec-bits_3-1.1.29-sources.jar"
                         }
                     ]
                 },
@@ -819,17 +753,12 @@
                     "artifacts": [
                         {
                             "name": "vault_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\vault_3\\3.1.0\\vault_3-3.1.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/vault_3/3.1.0/vault_3-3.1.0.jar"
                         },
                         {
                             "name": "vault_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\vault_3\\3.1.0\\vault_3-3.1.0-sources.jar"
-                        },
-                        {
-                            "name": "vault_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\vault_3\\3.1.0\\vault_3-3.1.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/vault_3/3.1.0/vault_3-3.1.0-sources.jar"
                         }
                     ]
                 },
@@ -841,17 +770,12 @@
                     "artifacts": [
                         {
                             "name": "jawn-fs2_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\jawn-fs2_3\\2.1.0\\jawn-fs2_3-2.1.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/jawn-fs2_3/2.1.0/jawn-fs2_3-2.1.0.jar"
                         },
                         {
                             "name": "jawn-fs2_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\jawn-fs2_3\\2.1.0\\jawn-fs2_3-2.1.0-sources.jar"
-                        },
-                        {
-                            "name": "jawn-fs2_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\jawn-fs2_3\\2.1.0\\jawn-fs2_3-2.1.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/jawn-fs2_3/2.1.0/jawn-fs2_3-2.1.0-sources.jar"
                         }
                     ]
                 },
@@ -863,17 +787,12 @@
                     "artifacts": [
                         {
                             "name": "jawn-parser_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\jawn-parser_3\\1.2.0\\jawn-parser_3-1.2.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/jawn-parser_3/1.2.0/jawn-parser_3-1.2.0.jar"
                         },
                         {
                             "name": "jawn-parser_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\jawn-parser_3\\1.2.0\\jawn-parser_3-1.2.0-sources.jar"
-                        },
-                        {
-                            "name": "jawn-parser_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\jawn-parser_3\\1.2.0\\jawn-parser_3-1.2.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/jawn-parser_3/1.2.0/jawn-parser_3-1.2.0-sources.jar"
                         }
                     ]
                 },
@@ -885,17 +804,80 @@
                     "artifacts": [
                         {
                             "name": "circe-numbers_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-numbers_3\\0.15.0-M1\\circe-numbers_3-0.15.0-M1.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-numbers_3/0.15.0-M1/circe-numbers_3-0.15.0-M1.jar"
                         },
                         {
                             "name": "circe-numbers_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-numbers_3\\0.15.0-M1\\circe-numbers_3-0.15.0-M1-sources.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-numbers_3/0.15.0-M1/circe-numbers_3-0.15.0-M1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-dbcp2",
+                    "version": "2.9.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-dbcp2",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-dbcp2/2.9.0/commons-dbcp2-2.9.0.jar"
                         },
                         {
-                            "name": "circe-numbers_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\circe\\circe-numbers_3\\0.15.0-M1\\circe-numbers_3-0.15.0-M1-javadoc.jar"
+                            "name": "commons-dbcp2",
+                            "classifier": "sources",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-dbcp2/2.9.0/commons-dbcp2-2.9.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-parser-combinators_3",
+                    "version": "2.1.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-parser-combinators_3",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_3/2.1.0/scala-parser-combinators_3-2.1.0.jar"
+                        },
+                        {
+                            "name": "scala-parser-combinators_3",
+                            "classifier": "sources",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_3/2.1.0/scala-parser-combinators_3-2.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-collection-compat_3",
+                    "version": "2.5.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-collection-compat_3",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_3/2.5.0/scala-collection-compat_3-2.5.0.jar"
+                        },
+                        {
+                            "name": "scala-collection-compat_3",
+                            "classifier": "sources",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_3/2.5.0/scala-collection-compat_3-2.5.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalikejdbc",
+                    "name": "scalikejdbc-interpolation-macro_3",
+                    "version": "4.0.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalikejdbc-interpolation-macro_3",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-interpolation-macro_3/4.0.0/scalikejdbc-interpolation-macro_3-4.0.0.jar"
+                        },
+                        {
+                            "name": "scalikejdbc-interpolation-macro_3",
+                            "classifier": "sources",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-interpolation-macro_3/4.0.0/scalikejdbc-interpolation-macro_3-4.0.0-sources.jar"
                         }
                     ]
                 },
@@ -907,17 +889,46 @@
                     "artifacts": [
                         {
                             "name": "simulacrum-scalafix-annotations_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\simulacrum-scalafix-annotations_3\\0.5.4\\simulacrum-scalafix-annotations_3-0.5.4.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/simulacrum-scalafix-annotations_3/0.5.4/simulacrum-scalafix-annotations_3-0.5.4.jar"
                         },
                         {
                             "name": "simulacrum-scalafix-annotations_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\simulacrum-scalafix-annotations_3\\0.5.4\\simulacrum-scalafix-annotations_3-0.5.4-sources.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/simulacrum-scalafix-annotations_3/0.5.4/simulacrum-scalafix-annotations_3-0.5.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-pool2",
+                    "version": "2.10.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-pool2",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.10.0/commons-pool2-2.10.0.jar"
                         },
                         {
-                            "name": "simulacrum-scalafix-annotations_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\simulacrum-scalafix-annotations_3\\0.5.4\\simulacrum-scalafix-annotations_3-0.5.4-javadoc.jar"
+                            "name": "commons-pool2",
+                            "classifier": "sources",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.10.0/commons-pool2-2.10.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-logging",
+                    "name": "commons-logging",
+                    "version": "1.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-logging",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"
+                        },
+                        {
+                            "name": "commons-logging",
+                            "classifier": "sources",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar"
                         }
                     ]
                 },
@@ -929,17 +940,12 @@
                     "artifacts": [
                         {
                             "name": "munit_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalameta\\munit_3\\0.7.29\\munit_3-0.7.29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/munit_3/0.7.29/munit_3-0.7.29.jar"
                         },
                         {
                             "name": "munit_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalameta\\munit_3\\0.7.29\\munit_3-0.7.29-sources.jar"
-                        },
-                        {
-                            "name": "munit_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalameta\\munit_3\\0.7.29\\munit_3-0.7.29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/munit_3/0.7.29/munit_3-0.7.29-sources.jar"
                         }
                     ]
                 },
@@ -951,17 +957,29 @@
                     "artifacts": [
                         {
                             "name": "munit-cats-effect-3_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\munit-cats-effect-3_3\\1.0.7\\munit-cats-effect-3_3-1.0.7.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/munit-cats-effect-3_3/1.0.7/munit-cats-effect-3_3-1.0.7.jar"
                         },
                         {
                             "name": "munit-cats-effect-3_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\munit-cats-effect-3_3\\1.0.7\\munit-cats-effect-3_3-1.0.7-sources.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/munit-cats-effect-3_3/1.0.7/munit-cats-effect-3_3-1.0.7-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalikejdbc",
+                    "name": "scalikejdbc-test_3",
+                    "version": "4.0.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalikejdbc-test_3",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-test_3/4.0.0/scalikejdbc-test_3-4.0.0.jar"
                         },
                         {
-                            "name": "munit-cats-effect-3_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\munit-cats-effect-3_3\\1.0.7\\munit-cats-effect-3_3-1.0.7-javadoc.jar"
+                            "name": "scalikejdbc-test_3",
+                            "classifier": "sources",
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalikejdbc/scalikejdbc-test_3/4.0.0/scalikejdbc-test_3-4.0.0-sources.jar"
                         }
                     ]
                 },
@@ -973,17 +991,12 @@
                     "artifacts": [
                         {
                             "name": "junit-interface",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalameta\\junit-interface\\0.7.29\\junit-interface-0.7.29.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/junit-interface/0.7.29/junit-interface-0.7.29.jar"
                         },
                         {
                             "name": "junit-interface",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalameta\\junit-interface\\0.7.29\\junit-interface-0.7.29-sources.jar"
-                        },
-                        {
-                            "name": "junit-interface",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalameta\\junit-interface\\0.7.29\\junit-interface-0.7.29-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/junit-interface/0.7.29/junit-interface-0.7.29-sources.jar"
                         }
                     ]
                 },
@@ -995,17 +1008,12 @@
                     "artifacts": [
                         {
                             "name": "junit",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\junit\\junit\\4.13.2\\junit-4.13.2.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar"
                         },
                         {
                             "name": "junit",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\junit\\junit\\4.13.2\\junit-4.13.2-sources.jar"
-                        },
-                        {
-                            "name": "junit",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\junit\\junit\\4.13.2\\junit-4.13.2-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2-sources.jar"
                         }
                     ]
                 },
@@ -1017,17 +1025,12 @@
                     "artifacts": [
                         {
                             "name": "cats-effect_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect_3\\3.3.0\\cats-effect_3-3.3.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect_3/3.3.0/cats-effect_3-3.3.0.jar"
                         },
                         {
                             "name": "cats-effect_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect_3\\3.3.0\\cats-effect_3-3.3.0-sources.jar"
-                        },
-                        {
-                            "name": "cats-effect_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect_3\\3.3.0\\cats-effect_3-3.3.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect_3/3.3.0/cats-effect_3-3.3.0-sources.jar"
                         }
                     ]
                 },
@@ -1039,17 +1042,12 @@
                     "artifacts": [
                         {
                             "name": "cats-core_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-core_3\\2.7.0\\cats-core_3-2.7.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_3/2.7.0/cats-core_3-2.7.0.jar"
                         },
                         {
                             "name": "cats-core_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-core_3\\2.7.0\\cats-core_3-2.7.0-sources.jar"
-                        },
-                        {
-                            "name": "cats-core_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-core_3\\2.7.0\\cats-core_3-2.7.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_3/2.7.0/cats-core_3-2.7.0-sources.jar"
                         }
                     ]
                 },
@@ -1061,17 +1059,12 @@
                     "artifacts": [
                         {
                             "name": "cats-effect-kernel_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect-kernel_3\\3.3.0\\cats-effect-kernel_3-3.3.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect-kernel_3/3.3.0/cats-effect-kernel_3-3.3.0.jar"
                         },
                         {
                             "name": "cats-effect-kernel_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect-kernel_3\\3.3.0\\cats-effect-kernel_3-3.3.0-sources.jar"
-                        },
-                        {
-                            "name": "cats-effect-kernel_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect-kernel_3\\3.3.0\\cats-effect-kernel_3-3.3.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect-kernel_3/3.3.0/cats-effect-kernel_3-3.3.0-sources.jar"
                         }
                     ]
                 },
@@ -1083,17 +1076,12 @@
                     "artifacts": [
                         {
                             "name": "cats-effect-std_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect-std_3\\3.3.0\\cats-effect-std_3-3.3.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect-std_3/3.3.0/cats-effect-std_3-3.3.0.jar"
                         },
                         {
                             "name": "cats-effect-std_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect-std_3\\3.3.0\\cats-effect-std_3-3.3.0-sources.jar"
-                        },
-                        {
-                            "name": "cats-effect-std_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-effect-std_3\\3.3.0\\cats-effect-std_3-3.3.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect-std_3/3.3.0/cats-effect-std_3-3.3.0-sources.jar"
                         }
                     ]
                 },
@@ -1105,17 +1093,12 @@
                     "artifacts": [
                         {
                             "name": "test-interface",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-interface\\1.0\\test-interface-1.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar"
                         },
                         {
                             "name": "test-interface",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-interface\\1.0\\test-interface-1.0-sources.jar"
-                        },
-                        {
-                            "name": "test-interface",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-interface\\1.0\\test-interface-1.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0-sources.jar"
                         }
                     ]
                 },
@@ -1127,17 +1110,12 @@
                     "artifacts": [
                         {
                             "name": "hamcrest-core",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"
                         },
                         {
                             "name": "hamcrest-core",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3-sources.jar"
-                        },
-                        {
-                            "name": "hamcrest-core",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar"
                         }
                     ]
                 },
@@ -1149,17 +1127,12 @@
                     "artifacts": [
                         {
                             "name": "cats-kernel_3",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-kernel_3\\2.7.0\\cats-kernel_3-2.7.0.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_3/2.7.0/cats-kernel_3-2.7.0.jar"
                         },
                         {
                             "name": "cats-kernel_3",
                             "classifier": "sources",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-kernel_3\\2.7.0\\cats-kernel_3-2.7.0-sources.jar"
-                        },
-                        {
-                            "name": "cats-kernel_3",
-                            "classifier": "javadoc",
-                            "path": "C:\\Users\\simon\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\typelevel\\cats-kernel_3\\2.7.0\\cats-kernel_3-2.7.0-javadoc.jar"
+                            "path": "/home/simonlewis/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_3/2.7.0/cats-kernel_3-2.7.0-sources.jar"
                         }
                     ]
                 }

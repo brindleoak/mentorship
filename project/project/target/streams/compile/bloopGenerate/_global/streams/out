@@ -1,4 +1,4 @@
-[debug] [mentorship-build-build] Classpath dependencies List()
-[debug] [mentorship-build-build] Dependencies from configurations List()
-[debug] Bloop wrote the configuration of project 'mentorship-build-build' to 'C:\Users\simon\GitHub\mentorship\project\project\.bloop\mentorship-build-build.json'
-[success] Generated .bloop\mentorship-build-build.json
+[0m[[0m[0mdebug[0m] [0m[0m[mentorship-build-build] Classpath dependencies List()[0m
+[0m[[0m[0mdebug[0m] [0m[0m[mentorship-build-build] Dependencies from configurations List()[0m
+[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'mentorship-build-build' to '/home/simonlewis/GitHub/mentorship/project/project/.bloop/mentorship-build-build.json'[0m
+[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop/mentorship-build-build.json[0m
