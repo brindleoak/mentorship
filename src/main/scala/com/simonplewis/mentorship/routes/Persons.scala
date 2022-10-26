@@ -1,20 +1,20 @@
 package com.simonplewis.mentorship
 
 import cats.effect.Concurrent
-import cats.implicits._
-import cats.data._
-import cats.data.Validated._
+import cats.implicits.*
+import cats.data.*
+import cats.data.Validated.*
 import io.circe.{Encoder, Json}
-import org.http4s._
-import org.http4s.implicits._
+import org.http4s.*
+import org.http4s.implicits.*
 import org.http4s.client.Client
 import org.http4s.client.dsl.Http4sClientDsl
-import org.http4s.circe._
-import org.http4s.Method._
+import org.http4s.circe.*
+import org.http4s.Method.*
 import cats.Applicative
 import cats.MonadError
 import cats.Monad
-import com.simonplewis.mentorship.models.*
+import com.simonplewis.mentorship.models.PersonDb
 
 type ValidatedPerson[A] = Validated[Persons.PersonError, A]
 
@@ -30,10 +30,9 @@ object Persons:
   final case class Greeting(greeting: String) extends AnyVal
 
   object Greeting:
-    given Encoder[Greeting] = new Encoder[Greeting]:
-      final def apply(a: Greeting): Json = Json.obj(
-        ("message", Json.fromString(a.greeting)),
-      )
+    given Encoder[Greeting] = (a: Greeting) => Json.obj(
+      ("message", Json.fromString(a.greeting)),
+    )
 
     given [F[_]]: EntityEncoder[F, Greeting] =
       jsonEncoderOf[F, Greeting]  
@@ -42,7 +41,7 @@ object Persons:
 
   def impl[F[_] : Applicative]: Persons[F] = new Persons[F]:
     def get(id: Int): ValidatedPerson[Person] = PersonDb.find(id) match  // to be replaced with MySQL lookup
-      case Some(p) => Person(1, "Simon", 56, "simon.p.lewis@outlook.com").valid
+      case Some(p) => Person(id, p.name, p.age, p.email).valid
       case None => PersonError("No such person: " + id).invalid
       
     def hello(validatedPerson: ValidatedPerson[Person]): F[Greeting] = validatedPerson match
