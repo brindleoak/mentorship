@@ -41,8 +41,8 @@ object Persons:
 
   def impl[F[_] : Applicative]: Persons[F] = new Persons[F]:
     def get(id: Int): ValidatedPerson[Person] = PersonDb.find(id) match  // to be replaced with MySQL lookup
-      case Some(p) => Person(id, p.name, p.age, p.email).valid
-      case None => PersonError("No such person: " + id).invalid
+      case p :: _ => Person(id, p.name, p.age, p.email).valid
+      case List() => PersonError("No such person: " + id).invalid
       
     def hello(validatedPerson: ValidatedPerson[Person]): F[Greeting] = validatedPerson match
       case Invalid(er) => Greeting(er.error).pure[F]

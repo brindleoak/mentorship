@@ -1,8 +1,7 @@
 package com.simonplewis.mentorship.models
 
-import com.simonplewis.mentorship.Main.dbConnection
-
 import java.time.{LocalDate, ZonedDateTime}
+import scalikejdbc.*
 
 case class PersonDb(
   id: Int,
@@ -10,19 +9,22 @@ case class PersonDb(
   age: Int,
   email: String)
 
-object PersonDb:
+object PersonDb extends SQLSyntaxSupport[PersonDb]:
+  override val tableName = "Person"
 
-  def find(id: Int): Option[PersonDb] =
-    val statement = dbConnection.createStatement
-    val rs = statement.executeQuery(s"""
-        |SELECT Name, Age, Email
+  def apply(rs: WrappedResultSet) = new PersonDb(
+    rs.int("Id"),
+    rs.string("Name"),
+    rs.int("Age"),
+    rs.string("Email")
+  )
+
+  def find(id: Int): List[PersonDb] =
+    implicit val session = AutoSession
+    sql"""
+        |SELECT Id, Name, Age, Email
         |FROM Person
-        |WHERE Id = $id""".stripMargin)
-    if rs.next() then Some(PersonDb(
-      id,
-      rs.getString("Name"),
-      rs.getInt("Age"),
-      rs.getString("Email")))
-    else None
+        |WHERE Id = $id""".stripMargin
+    .map(rs => PersonDb(rs)).list.apply()    
 
 end PersonDb
