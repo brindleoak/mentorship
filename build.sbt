@@ -5,6 +5,8 @@ val ScalikejdbcVersion = "4.0.0"
 val H2databaseVersion = "1.4.200"
 val LogBackVersion = "1.4.4"
 val MySqlVersion = "8.0.30"
+val CirceVersion = "0.14.0"
+val CatsEffectVersion = "3.2.0"
 
 lazy val root = (project in file("."))
   .settings(
@@ -17,11 +19,14 @@ lazy val root = (project in file("."))
       "org.http4s"      %% "http4s-ember-client"  % Http4sVersion,
       "org.http4s"      %% "http4s-circe"         % Http4sVersion,
       "org.http4s"      %% "http4s-dsl"           % Http4sVersion,
+      "org.http4s"      %% "http4s-blaze-server"  % Http4sVersion,
       "org.scalameta"   %% "munit"                % MunitVersion           % Test,
       "org.typelevel"   %% "munit-cats-effect-3"  % MunitCatsEffectVersion % Test,
       "mysql"           %  "mysql-connector-java" % MySqlVersion,
       "ch.qos.logback"  %  "logback-classic"      % LogBackVersion,
-      "org.scalikejdbc" %% "scalikejdbc"          % ScalikejdbcVersion
+      "org.scalikejdbc" %% "scalikejdbc"          % ScalikejdbcVersion,
+      "io.circe"        %% "circe-generic"        % CirceVersion,
+      "org.typelevel"   %% "cats-effect"          % CatsEffectVersion
     ),
     testFrameworks += new TestFramework("munit.Framework")
   )
