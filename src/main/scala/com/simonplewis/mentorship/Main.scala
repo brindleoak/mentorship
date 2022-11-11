@@ -2,8 +2,9 @@ package com.simonplewis.mentorship
 
 import scalikejdbc.*
 import cats.effect.*
-import org.http4s.server.blaze.BlazeServerBuilder
-import scala.concurrent.ExecutionContext.global
+import org.http4s.blaze.server.BlazeServerBuilder
+import scala.concurrent.ExecutionContext
+
 
 object Main extends IOApp:
 
@@ -13,7 +14,7 @@ object Main extends IOApp:
 
     val mentorshipApp = MentorshipServer.allRoutesComplete[IO]
 
-    BlazeServerBuilder[IO](global)
+    BlazeServerBuilder[IO]
       .bindHttp(8080, "localhost")
       .withHttpApp(mentorshipApp)
       .resource

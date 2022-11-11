@@ -4,25 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d98fc5b-05fa-498d-afbc-07a72dc2a80e" name="Changes" comment="">
+    <list default="true" id="1d98fc5b-05fa-498d-afbc-07a72dc2a80e" name="Changes" comment="proper query parameter">
+      <change beforePath="$PROJECT_DIR$/.bsp/sbt.json" beforeDir="false" afterPath="$PROJECT_DIR$/.bsp/sbt.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/mentorship-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/mentorship-build.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/mentorship.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/mentorship.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metals/metals.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/.metals/metals.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/project/target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/project/target/streams/compile/compileIncremental/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/project/target/streams/compile/copyResources/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/project/target/streams/compile/copyResources/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/project/target/streams/compile/incOptions/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/project/target/streams/compile/incOptions/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/bloopGenerate/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/bloopGenerate/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/bloopPostGenerate/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/bloopPostGenerate/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/incOptions/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/incOptions/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.bloop/mentorship-build.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/.bloop/mentorship-build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/Main.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/MentorshipRoutes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/MentorshipRoutes.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/MentorshipServer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/MentorshipServer.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/routes/Persons.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/routes/Persons.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/routes/Persons.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/routes/Person.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/HelloWorld.tasty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Jokes.tasty" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Main.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Main.tasty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Persons$package.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Persons$package.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/MentorshipRoutes.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/MentorshipRoutes.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/MentorshipServer.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/MentorshipServer.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Persons$package.tasty" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Persons.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Persons.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/update/update_cache_3/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.1.0/update/update_cache_3/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
@@ -125,6 +124,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="proper query parameter" />
+    <option name="LAST_COMMIT_MESSAGE" value="proper query parameter" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -132,6 +135,11 @@
           <url>file://$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/models/PersonDb.scala</url>
           <line>28</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/MentorshipRoutes.scala</url>
+          <line>15</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
