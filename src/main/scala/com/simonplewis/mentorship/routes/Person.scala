@@ -1,4 +1,4 @@
-package com.simonplewis.mentorship
+package com.simonplewis.mentorship.routes
 
 import cats.*
 import cats.data.*
@@ -13,10 +13,9 @@ case class Person(
   email: String
 )
 
-object Persons:
-  def get(id: String): Validated[String, Person] = 
-    val idInt = id.toInt
-    PersonDb.find(idInt) match  
+object Person:
+  def get(id: Int): Validated[String, Person] =
+    PersonDb.find(id) match
       case p :: _ => Person(p.id, p.name, p.age, p.email).valid
       case List() => s"No such person: $id".invalid
     
