@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d98fc5b-05fa-498d-afbc-07a72dc2a80e" name="Changes" comment="proper query parameter">
-      <change beforePath="$PROJECT_DIR$/.bsp/sbt.json" beforeDir="false" afterPath="$PROJECT_DIR$/.bsp/sbt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/mentorship-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/mentorship-build.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/mentorship.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/mentorship.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metals/metals.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/.metals/metals.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.bloop/mentorship-build.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/.bloop/mentorship-build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/MentorshipRoutes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/MentorshipRoutes.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/routes/Persons.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/simonplewis/mentorship/routes/Person.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/HelloWorld.tasty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Jokes.tasty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Main.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Main.tasty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/MentorshipRoutes.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/MentorshipRoutes.tasty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/MentorshipServer.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/MentorshipServer.tasty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Persons$package.tasty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Persons.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.1.0/classes/com/simonplewis/mentorship/Persons.tasty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-3.1.0/update/update_cache_3/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.1.0/update/update_cache_3/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
-    </list>
+    <list default="true" id="1d98fc5b-05fa-498d-afbc-07a72dc2a80e" name="Changes" comment="proper query parameter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,6 +90,21 @@
       <option name="presentableId" value="Default" />
       <updated>1666728041377</updated>
     </task>
+    <task id="LOCAL-00001" summary="proper query parameter">
+      <created>1668200817863</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668200817863</updated>
+    </task>
+    <task id="LOCAL-00002" summary="proper query parameter">
+      <created>1668200928746</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668200928746</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -197,7 +197,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/usr/lib/jvm/java-19-openjdk-19.0.1.0.10-2.rolling.fc37.x86_64",
+                "home": "/home/simon/.jabba/jdk/openjdk@1.17.0",
                 "options": [
                     "-Duser.dir=/home/simon/GitHub/mentorship/project"
                 ]

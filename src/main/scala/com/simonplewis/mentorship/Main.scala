@@ -5,7 +5,6 @@ import cats.effect.*
 import org.http4s.blaze.server.BlazeServerBuilder
 import scala.concurrent.ExecutionContext
 
-
 object Main extends IOApp:
 
   ConnectionPool.singleton("jdbc:mysql://127.0.0.1:3306/master", "root", "9996")
