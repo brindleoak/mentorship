@@ -7,7 +7,7 @@ import scala.concurrent.ExecutionContext
 
 object Main extends IOApp:
 
-  ConnectionPool.singleton("jdbc:mysql://127.0.0.1:3306/master", "root", "9996")
+  ConnectionPool.singleton("jdbc:mysql://127.0.0.1:3306/PersonDB", "simon", "password")
 
   override def run(args: List[String]): IO[ExitCode] = 
 
