@@ -15,8 +15,6 @@ import org.http4s.headers.Location
 import org.http4s.circe.*
 import org.http4s.circe.CirceEntityDecoder.*
 
-import java.net.http.HttpClient.Redirect
-
 import scala.concurrent.ExecutionContext.Implicits.global
 
 import com.simonplewis.mentorship.routes.*
@@ -26,18 +24,20 @@ object MentorshipRoutes:
   def urlRoutes[F[_] : Concurrent]: HttpRoutes[F] =
     val dsl = Http4sDsl[F]
     import dsl._
-    implicit val decoder:EntityDecoder[IO, String] = jsonOf[IO, String]
+    implicit val decoder:EntityDecoder[IO, UrlRequest] = jsonOf[IO, UrlRequest]
     HttpRoutes.of[F] {
       case GET -> Root =>
         Ok("Hello, World!")
 
       case urlRequest @ POST -> Root / "url" =>
         for
-          target_url <- urlRequest.as[String]
-          target_uri = Uri.fromString(target_url) 
-          response = UrlResponse(target_url, true, 0, "ABCD", "EFGHIJ")
-          resp <- Ok(response.asJson)
-        yield resp  
+          targetUrl <- urlRequest.as[UrlRequest]
+          shortened = UrlResponse(targetUrl.url)
+          response <- shortened match
+            case Left(er) => BadRequest(er.description)
+            case Right(resp) => Ok(resp.asJson)
+        yield response  
+            
 
       case GET -> Root / "redirect" =>
         Uri.fromString("https://www.bbc.co.uk") match

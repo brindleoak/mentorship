@@ -5,35 +5,34 @@ import cats.data.*
 import cats.syntax.either.catsSyntaxEither
 import org.http4s.Uri
 import org.http4s.ParseFailure
+import org.http4s.circe.CirceInstances
+import org.http4s.circe.CirceEntityEncoder
 
-trait UrlFailure(er: String)
-class UrlInvalid(er: String) extends UrlFailure(er)
+trait UrlFailure(val description: String) 
+case class UrlInvalid(er: String) extends UrlFailure(er)
+
+case class UrlRequest(url: String)
 
 case class UrlResponse(
   target_url: String,
   is_active: Boolean,
   clicks: Int,
   url: String,
-  admin_url: String):
-    def map(f: UrlResponse => UrlResponse) = ???
+  admin_url: String)
 
 object UrlResponse:
-  def apply(
-    target_url: String,
-    is_active: Boolean,
-    clicks: Int,
-    url: String,
-    admin_url: String): Either[UrlFailure, UrlResponse] = for {
-      targetUri <- Uri.fromString(target_url)  //.leftMap(e => new UrlInvalid(e.details)) 
-      validUri <- validateUri(targetUri)
-      urlResponse <- 
-        new UrlResponse("",true,0,"","")
-    } yield urlResponse
+  def apply(target_url: String) =
+      for {
+        targetUri <- Uri.fromString(target_url).leftMap(e => new UrlInvalid(e.details)) 
+        validUri <- validateUri(targetUri)
+        shortened <- shortenUri(validUri)
+      } yield shortened
 
-    def validateUri(uri: Either[UrlFailure, UrlResponse]): Either[UrlFailure, UrlResponse]
-      = uri
-
-object Url:
-  def get(key: String): Validated[String, UrlResponse] = ???
-
+  // check if this url has already been shortened
+  def validateUri(uri: Uri): Either[UrlFailure, Uri]
+    = Right(uri)
+    
+  // shorten the url  
+  def shortenUri(uri: Uri): Either[UrlFailure, UrlResponse]
+    = Right(new UrlResponse(uri.toString, true, 0, "ABC", "DEF"))
 
