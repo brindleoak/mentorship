@@ -23,39 +23,24 @@ import com.simonplewis.mentorship.routes.*
 
 object MentorshipRoutes:
 
-  object PersonQueryParamMatcher extends QueryParamDecoderMatcher[String]("id")
-
-  def personRoutes[F[_] : Monad]: HttpRoutes[F] =
-    val dsl = Http4sDsl[F]
-    import dsl._
-    HttpRoutes.of[F] {
-      case GET -> Root / "person" / "get" :? PersonQueryParamMatcher(personId) =>
-        personId.toIntOption match
-          case Some(id) => 
-            val person = Person.get(id)
-            val greeting = Person.hello(person)
-            Ok(greeting)
-          case None => BadRequest("Person id must be numeric")
-      case GET -> Root / "redirect" =>
-        Found(Location(Uri.unsafeFromString("https://www.bbc.co.uk"))) 
-
-      case PUT -> Root / "url" / newUrl =>
-        Ok(newUrl + "so far...")      
-    }
-
   def urlRoutes[F[_] : Concurrent]: HttpRoutes[F] =
     val dsl = Http4sDsl[F]
     import dsl._
-    implicit val decoder:EntityDecoder[IO, UrlRequest] = jsonOf[IO, UrlRequest]
+    implicit val decoder:EntityDecoder[IO, String] = jsonOf[IO, String]
     HttpRoutes.of[F] {
-
-      case GET -> Root / "redirect" =>
-        Found(Location(Uri.unsafeFromString("https://www.bbc.co.uk"))) 
+      case GET -> Root =>
+        Ok("Hello, World!")
 
       case urlRequest @ POST -> Root / "url" =>
         for
-          target_url <- urlRequest.as[UrlRequest]
-          response = UrlResponse(target_url.url, true, 0, "ABCD", "EFGHIJ")
+          target_url <- urlRequest.as[String]
+          target_uri = Uri.fromString(target_url) 
+          response = UrlResponse(target_url, true, 0, "ABCD", "EFGHIJ")
           resp <- Ok(response.asJson)
-        yield resp    
+        yield resp  
+
+      case GET -> Root / "redirect" =>
+        Uri.fromString("https://www.bbc.co.uk") match
+          case Left(er) => BadRequest(er.details)
+          case Right(uri) => Ok(uri.toString)   
     }  
