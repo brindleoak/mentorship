@@ -6,9 +6,9 @@ import scalikejdbc.*
 case class UrlsDb(
   id: Int,
   key: String,
-  secret_key: String,
-  target_url: String,
-  is_active: Boolean,
+  secretKey: String,
+  targetUrl: String,
+  isActive: Boolean,
   clicks: Int)
 
 object UrlsDb extends SQLSyntaxSupport[UrlsDb]:

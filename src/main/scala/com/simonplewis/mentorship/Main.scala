@@ -3,7 +3,6 @@ package com.simonplewis.mentorship
 import scalikejdbc.*
 import cats.effect.*
 import org.http4s.blaze.server.BlazeServerBuilder
-import scala.concurrent.ExecutionContext
 
 object Main extends IOApp:
 

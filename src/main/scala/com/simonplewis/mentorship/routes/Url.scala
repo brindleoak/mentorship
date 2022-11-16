@@ -1,12 +1,7 @@
 package com.simonplewis.mentorship.routes
 
-import cats.*
-import cats.data.*
 import cats.syntax.either.catsSyntaxEither
 import org.http4s.Uri
-import org.http4s.ParseFailure
-import org.http4s.circe.CirceInstances
-import org.http4s.circe.CirceEntityEncoder
 
 trait UrlFailure(val description: String) 
 case class UrlInvalid(er: String) extends UrlFailure(er)
@@ -22,11 +17,11 @@ case class UrlResponse(
 
 object UrlResponse:
   def apply(target_url: String) =
-      for {
-        targetUri <- Uri.fromString(target_url).leftMap(e => new UrlInvalid(e.details)) 
-        validUri <- validateUri(targetUri)
-        shortened <- shortenUri(validUri)
-      } yield shortened
+    for 
+      targetUri <- Uri.fromString(target_url).leftMap(e => new UrlInvalid(e.details)) 
+      validUri <- validateUri(targetUri)
+      shortened <- shortenUri(validUri)
+    yield shortened
 
   // check if this url has already been shortened
   def validateUri(uri: Uri): Either[UrlFailure, Uri]
