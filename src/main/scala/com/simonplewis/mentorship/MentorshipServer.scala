@@ -1,6 +1,5 @@
 package com.simonplewis.mentorship
 
-import cats.implicits.*
 import cats.effect.*
 import org.http4s.HttpRoutes
 import org.http4s.HttpApp
