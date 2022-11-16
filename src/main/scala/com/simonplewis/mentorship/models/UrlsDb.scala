@@ -23,12 +23,47 @@ object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
     rs.int("clicks")
   )
 
-  def find_key(key: String): List[UrlsDb] =
-    implicit val session = AutoSession
-    sql"""
-        |SELECT id, key, secret_key, target_url, is_active, clicks
-        |FROM urls
-        |WHERE key = $key""".stripMargin
-    .map(rs => UrlsDb(rs)).list.apply()    
+  def findTargetUrl(url: String): Option[UrlsDb] =
+    DB readOnly { implicit session =>
+      sql"""
+          |SELECT id, key, secret_key, target_url, is_active, clicks
+          |FROM urls
+          |WHERE target_url = $url""".stripMargin
+      .map(rs => UrlsDb(rs)).single.apply()    
+    }
 
+  def findKey(key: String): Option[UrlsDb] =
+    DB readOnly { implicit session =>
+      sql"""
+          |SELECT id, key, secret_key, target_url, is_active, clicks
+          |FROM urls
+          |WHERE key = $key""".stripMargin
+      .map(rs => UrlsDb(rs)).single.apply()    
+    }
+
+  def updateClicks(key: String, clicks: Int) =
+    DB localTx { implicit session =>
+      sql"""
+          |UPDATE urls
+          |SET clicks = clicks + 1
+          |WHERE key = $key""".stripMargin
+      .update.apply()
+    }
+
+  def setActive(key: String, isActive: Boolean) = 
+    DB localTx { implicit session =>
+      sql"""
+          |UPDATE urls
+          |SET is_active = ${isActive.toString}
+          |WHERE key = $key""".stripMargin
+      .update.apply()
+    }
+
+  def newUrl(key: String, secretKey: String, targetUrl: String) =
+    DB localTx { implicit session =>
+      sql"""
+          |INSERT INTO urls (key, secret_key, target_url, is_active, clicks)
+          |VALUES ($key, $secretKey, $targetUrl, TRUE, 0)""".stripMargin
+      .update.apply()
+  }
 end UrlsDb
