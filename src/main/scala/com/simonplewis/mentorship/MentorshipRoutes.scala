@@ -26,8 +26,8 @@ object MentorshipRoutes:
       case urlRequest @ POST -> Root / "url" =>
         for
           targetUrl <- urlRequest.as[UrlRequest]
-          shortened = UrlResponse(targetUrl.url)
-          response <- shortened match
+          shortenedUrl = UrlResponse(targetUrl)
+          response <- shortenedUrl match
             case Left(er) => BadRequest(er.description)
             case Right(resp) => Ok(resp.asJson)
         yield response  
