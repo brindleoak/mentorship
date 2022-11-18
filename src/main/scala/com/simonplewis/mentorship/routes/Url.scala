@@ -7,7 +7,7 @@ import com.simonplewis.mentorship.models.UrlsDb
 
 trait UrlFailure(val description: String) 
 case class UrlInvalid(er: String) extends UrlFailure(er)
-case class UrlAlreadyShortened(er: String) extends UrlFailure(er)
+case class UrlAlreadyShortened(er: String = "This URL has already been shortened") extends UrlFailure(er)
 case class DbError(er:String) extends UrlFailure(er)
 
 
@@ -28,11 +28,11 @@ object UrlResponse:
       urlResponse <- shortenUri(validatedUri)
     yield urlResponse
 
-  // check if this url has already been shortened
-  def validateUri(uri: Uri): Either[UrlFailure, Uri]
-    = Right(uri)
-    
-  // shorten the url  
+  def validateUri(uri: Uri): Either[UrlFailure, Uri] =
+    UrlsDb.findTargetUrl(uri.renderString) match
+      case Some(_) => Left(UrlAlreadyShortened())
+      case _ => Right(uri)
+        
   def shortenUri(uri: Uri): Either[UrlFailure, UrlResponse] =
     val url = Random.shuffle('A' to 'Z').mkString.take(5)
     val adminUrl = Random.shuffle('A' to 'Z').mkString.take(8)
