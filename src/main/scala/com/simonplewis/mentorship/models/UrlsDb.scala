@@ -13,31 +13,38 @@ case class UrlsDb(
 object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
   override val tableName = "urls"
 
-  def apply(rs: WrappedResultSet) = new UrlsDb(
-    rs.string("short_url"),
-    rs.string("secret_key"),
-    rs.string("target_url"),
-    rs.boolean("is_active"),
-    rs.int("clicks")
-  )
+  def apply(u: ResultName[UrlsDb])(rs: WrappedResultSet): UrlsDb = 
+    new UrlsDb(
+      rs.string(u.shortUrl),
+      rs.string(u.secretKey),
+      rs.string(u.targetUrl),
+      rs.boolean(u.isActive),
+      rs.int(u.clicks)
+    )
 
-  def findTargetUrl(url: String): Option[UrlsDb] =
-    DB readOnly { implicit session =>
-      sql"""
-          |SELECT short_url, secret_key, target_url, is_active, clicks
-          |FROM urls
-          |WHERE target_url = $url""".stripMargin
-      .map(rs => UrlsDb(rs)).single.apply()    
-    }
+  def apply(u: SyntaxProvider[UrlsDb])(rs: WrappedResultSet): UrlsDb =
+    apply(u.resultName)(rs)  
 
-  def findKey(shortUrl: String): Option[UrlsDb] =
-    DB readOnly { implicit session =>
-      sql"""
-          |SELECT short_url, secret_key, target_url, is_active, clicks
-          |FROM urls
-          |WHERE short_url = $shortUrl""".stripMargin
-      .map(rs => UrlsDb(rs)).single.apply()    
-    }
+  def findTargetUrl(url: String) =
+    DB localTx { implicit session =>
+      val u = UrlsDb.syntax("u")
+
+      withSQL {
+        select
+        .from(UrlsDb as u)
+        .where.eq(u.targetUrl, url)
+      }.map(UrlsDb(u)).single.apply()   
+    } 
+    
+
+  //def findKey(shortUrl: String): Option[UrlsDb] =
+  //  DB readOnly { implicit session =>
+  //    sql"""
+  //        |SELECT short_url, secret_key, target_url, is_active, clicks
+  //        |FROM urls
+  //        |WHERE short_url = $shortUrl""".stripMargin
+  //    .map(rs => UrlsDb(rs)).single.apply()    
+  //  }
 
   def updateClicks(shortUrl: String, clicks: Int) =
     DB localTx { implicit session =>
