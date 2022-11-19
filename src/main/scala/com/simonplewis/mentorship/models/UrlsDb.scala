@@ -8,22 +8,8 @@ case class UrlsDb(
   secretKey: String,
   targetUrl: String,
   isActive: Boolean,
-  clicks: Int)
-
-object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
-  override val tableName = "urls"
-
-  def apply(u: ResultName[UrlsDb])(rs: WrappedResultSet): UrlsDb = 
-    new UrlsDb(
-      rs.string(u.shortUrl),
-      rs.string(u.secretKey),
-      rs.string(u.targetUrl),
-      rs.boolean(u.isActive),
-      rs.int(u.clicks)
-    )
-
-  def apply(u: SyntaxProvider[UrlsDb])(rs: WrappedResultSet): UrlsDb =
-    apply(u.resultName)(rs)  
+  clicks: Int
+) extends SQLSyntaxSupport[UrlsDb]:
 
   def findTargetUrl(url: String) =
     DB localTx { implicit session =>
@@ -35,16 +21,6 @@ object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
         .where.eq(u.targetUrl, url)
       }.map(UrlsDb(u)).single.apply()   
     } 
-    
-
-  //def findKey(shortUrl: String): Option[UrlsDb] =
-  //  DB readOnly { implicit session =>
-  //    sql"""
-  //        |SELECT short_url, secret_key, target_url, is_active, clicks
-  //        |FROM urls
-  //        |WHERE short_url = $shortUrl""".stripMargin
-  //    .map(rs => UrlsDb(rs)).single.apply()    
-  //  }
 
   def updateClicks(shortUrl: String, clicks: Int) =
     DB localTx { implicit session =>
@@ -72,8 +48,35 @@ object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
             .columns(column.shortUrl, column.secretKey, column.targetUrl, column.isActive, column.clicks)
             .values(shortUrl, secretKey, targetUrl, true, 0)
         }.update.apply()
-      ()  
+        ()  
       }
     catch 
       case e: Exception => e.toString
-end UrlsDb
+
+object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
+  override val tableName = "urls"
+
+  def apply(): UrlsDb = 
+    new UrlsDb("", "", "", true, 0)
+
+  def apply(u: ResultName[UrlsDb])(rs: WrappedResultSet): UrlsDb = 
+    new UrlsDb(
+      rs.string(u.shortUrl),
+      rs.string(u.secretKey),
+      rs.string(u.targetUrl),
+      rs.boolean(u.isActive),
+      rs.int(u.clicks)
+    )
+
+  def apply(u: SyntaxProvider[UrlsDb])(rs: WrappedResultSet): UrlsDb =
+    apply(u.resultName)(rs)  
+    
+
+  //def findKey(shortUrl: String): Option[UrlsDb] =
+  //  DB readOnly { implicit session =>
+  //    sql"""
+  //        |SELECT short_url, secret_key, target_url, is_active, clicks
+  //        |FROM urls
+  //        |WHERE short_url = $shortUrl""".stripMargin
+  //    .map(rs => UrlsDb(rs)).single.apply()    
+  //  }
