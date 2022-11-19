@@ -11,6 +11,8 @@ case class UrlsDb(
   clicks: Int
 ) extends SQLSyntaxSupport[UrlsDb]:
 
+  override val tableName = "urls"
+
   def findTargetUrl(url: String) =
     DB localTx { implicit session =>
       val u = UrlsDb.syntax("u")
@@ -22,23 +24,34 @@ case class UrlsDb(
       }.map(UrlsDb(u)).single.apply()   
     } 
 
-  def updateClicks(shortUrl: String, clicks: Int) =
-    DB localTx { implicit session =>
-      sql"""
-          |UPDATE urls
-          |SET clicks = clicks + 1
-          |WHERE short_url = $shortUrl""".stripMargin
-      .update.apply()
-    }
+  def findShortUrl(url: String) =
+  DB localTx { implicit session =>
+    val u = UrlsDb.syntax("u")
 
-  def setActive(shortUrl: String, isActive: Boolean) = 
-    DB localTx { implicit session =>
-      sql"""
-          |UPDATE urls
-          |SET is_active = ${isActive.toString}
-          |WHERE short_url = $shortUrl""".stripMargin
-      .update.apply()
-    }
+    withSQL {
+      select
+      .from(UrlsDb as u)
+      .where.eq(u.shortUrl, url)
+    }.map(UrlsDb(u)).single.apply()   
+  }   
+
+  // def updateClicks(shortUrl: String, clicks: Int) =
+  //   DB localTx { implicit session =>
+  //     sql"""
+  //         |UPDATE urls
+  //         |SET clicks = clicks + 1
+  //         |WHERE short_url = $shortUrl""".stripMargin
+  //     .update.apply()
+  //   }
+
+  // def setActive(shortUrl: String, isActive: Boolean) = 
+  //   DB localTx { implicit session =>
+  //     sql"""
+  //         |UPDATE urls
+  //         |SET is_active = ${isActive.toString}
+  //         |WHERE short_url = $shortUrl""".stripMargin
+  //     .update.apply()
+  //   }
 
   def newUrl(shortUrl: String, secretKey: String, targetUrl: String) =
     try
@@ -70,13 +83,3 @@ object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
 
   def apply(u: SyntaxProvider[UrlsDb])(rs: WrappedResultSet): UrlsDb =
     apply(u.resultName)(rs)  
-    
-
-  //def findKey(shortUrl: String): Option[UrlsDb] =
-  //  DB readOnly { implicit session =>
-  //    sql"""
-  //        |SELECT short_url, secret_key, target_url, is_active, clicks
-  //        |FROM urls
-  //        |WHERE short_url = $shortUrl""".stripMargin
-  //    .map(rs => UrlsDb(rs)).single.apply()    
-  //  }

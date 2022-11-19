@@ -13,6 +13,7 @@ import org.http4s.*
 import org.http4s.dsl.Http4sDsl
 import org.http4s.circe.*
 import org.http4s.circe.CirceEntityDecoder.*
+import org.http4s.headers.Location
 
 
 object MentorshipRoutes:
@@ -37,15 +38,15 @@ object MentorshipRoutes:
                 resp.targetUrl.renderString,
                 resp.isActive,
                 resp.clicks,
-                resp.shortenedUrl.renderString,
+                resp.shortenedUrl,
                 resp.adminKey
               ).asJson
               Ok(shortenUrlResponse)
             
         yield response          
 
-      case GET -> Root / "redirect" =>
-        Uri.fromString("https://www.bbc.co.uk") match
-          case Left(er) => BadRequest(er.details)
-          case Right(uri) => Ok(uri.toString)   
+      case GET -> Root / shortUrl  =>
+        UrlShortener(shortUrl).lookupShortUrl match
+          case e: UrlFailure => BadRequest(e.description)
+          case resp: UrlShorten => Found(Location(resp.targetUrl))   
     }  
