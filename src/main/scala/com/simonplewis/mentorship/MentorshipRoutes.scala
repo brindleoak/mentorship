@@ -1,7 +1,7 @@
 package com.simonplewis.mentorship
 
 import com.simonplewis.mentorship.routes.*
-import com.simonplewis.mentorship.models.UrlsDb
+import com.simonplewis.mentorship.models.*
 
 import cats.effect.*
 import cats.implicits.*
@@ -14,6 +14,7 @@ import org.http4s.dsl.Http4sDsl
 import org.http4s.circe.*
 import org.http4s.circe.CirceEntityDecoder.*
 import org.http4s.headers.Location
+import com.simonplewis.mentorship.models.UrlRecord
 
 
 object MentorshipRoutes:
@@ -29,24 +30,30 @@ object MentorshipRoutes:
       case urlRequest @ POST -> Root / "url" =>
         for
           shortenUrlRequest <- urlRequest.as[ShortenUrlRequest]
-          targetUri =  Uri.fromString(shortenUrlRequest.url).leftMap(e => new UrlInvalid(e.sanitized)) 
-          urlShortener = UrlShortener(targetUri).shortenUrl
-          response <- urlShortener match
-            case e: UrlFailure => BadRequest(e.description)
-            case resp: UrlShorten => 
+
+          urlRecord = Uri.fromString(shortenUrlRequest.url) match
+            case Left(e) => Left(UrlInvalid(e.sanitized))
+            case Right(u) => Right(UrlRecord(targetUrl = u.renderString))
+
+          urlShortener = UrlShortener.shortenUrl(urlRecord) 
+           
+          result <- urlShortener match
+            case Left(e) => BadRequest(e.description)
+            case Right(u) => 
               val shortenUrlResponse = ShortenUrlResponse(
-                resp.targetUrl.renderString,
-                resp.isActive,
-                resp.clicks,
-                resp.shortenedUrl,
-                resp.adminKey
+                u.targetUrl,
+                u.isActive,
+                u.clicks,
+                u.shortUrl,
+                u.secretKey
               ).asJson
               Ok(shortenUrlResponse)
-            
-        yield response          
+        yield result
+      
 
       case GET -> Root / shortUrl  =>
-        UrlShortener(shortUrl).lookupShortUrl match
-          case e: UrlFailure => BadRequest(e.description)
-          case resp: UrlShorten => Found(Location(resp.targetUrl))   
+        val urlRecord = UrlRecord(shortUrl = shortUrl)
+        UrlShortener.lookupShortUrl(urlRecord) match
+          case Left(e) => BadRequest(e.description)
+          case Right(u) => Found(Location(Uri.unsafeFromString(u.targetUrl)))   
     }  

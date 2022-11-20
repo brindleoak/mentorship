@@ -1,78 +1,77 @@
 package com.simonplewis.mentorship.models
 
-import java.time.{LocalDate, ZonedDateTime}
 import scalikejdbc.*
+import com.simonplewis.mentorship.routes.*
 
 case class UrlsDb(
-  shortUrl: String,
-  secretKey: String,
-  targetUrl: String,
-  isActive: Boolean,
-  clicks: Int
+  shortUrl: String = "",
+  secretKey: String = "",
+  targetUrl: String = "",
+  isActive: Boolean = true,
+  clicks: Int = 0
 ) extends SQLSyntaxSupport[UrlsDb]:
 
   override val tableName = "urls"
 
-  def findTargetUrl(url: String) =
-    DB localTx { implicit session =>
+  def findTargetUrl(url: String): Option[UrlRecord] =
+    DB readOnly { implicit session =>
       val u = UrlsDb.syntax("u")
 
       withSQL {
         select
         .from(UrlsDb as u)
         .where.eq(u.targetUrl, url)
-      }.map(UrlsDb(u)).single.apply()   
+      }
+      .map(UrlsDb(u)).single.apply()   
+      .map(res => UrlRecord(
+        res.shortUrl,
+        res.secretKey,
+        res.targetUrl,
+        res.isActive,
+        res.clicks)
+      )
     } 
 
-  def findShortUrl(url: String) =
-  DB localTx { implicit session =>
-    val u = UrlsDb.syntax("u")
+  def findShortUrl(url: String): Option[UrlRecord] =
+    DB localTx { implicit session =>
+      val u = UrlsDb.syntax("u")
 
-    withSQL {
-      select
-      .from(UrlsDb as u)
-      .where.eq(u.shortUrl, url)
-    }.map(UrlsDb(u)).single.apply()   
+      withSQL {
+        select
+        .from(UrlsDb as u)
+        .where.eq(u.shortUrl, url)
+      }
+      .map(UrlsDb(u)).single.apply()
+      .map(res => UrlRecord(
+        res.shortUrl,
+        res.secretKey,
+        res.targetUrl,
+        res.isActive,
+        res.clicks)
+      )
   }   
 
-  // def updateClicks(shortUrl: String, clicks: Int) =
-  //   DB localTx { implicit session =>
-  //     sql"""
-  //         |UPDATE urls
-  //         |SET clicks = clicks + 1
-  //         |WHERE short_url = $shortUrl""".stripMargin
-  //     .update.apply()
-  //   }
-
-  // def setActive(shortUrl: String, isActive: Boolean) = 
-  //   DB localTx { implicit session =>
-  //     sql"""
-  //         |UPDATE urls
-  //         |SET is_active = ${isActive.toString}
-  //         |WHERE short_url = $shortUrl""".stripMargin
-  //     .update.apply()
-  //   }
-
-  def newUrl(shortUrl: String, secretKey: String, targetUrl: String) =
-    try
-      DB localTx { implicit session =>
-        withSQL {
-          insert.into(UrlsDb)
-            .columns(column.shortUrl, column.secretKey, column.targetUrl, column.isActive, column.clicks)
-            .values(shortUrl, secretKey, targetUrl, true, 0)
-        }.update.apply()
-        ()  
-      }
-    catch 
-      case e: Exception => e.toString
+  def newUrl(urlRecord: ValidUrl): ValidUrl =
+    urlRecord match
+      case Left(_) => urlRecord
+      case Right(u) =>   
+        try
+          DB localTx { implicit session =>
+            withSQL {
+              insert.into(UrlsDb)
+                .columns(column.shortUrl, column.secretKey, column.targetUrl, column.isActive, column.clicks)
+                .values(u.shortUrl, u.secretKey, u.targetUrl, true, 0)
+            }.update.apply()
+            Right(u)  
+          }
+        catch 
+          case e: Exception => Left(DbError(e.toString))
 
 object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
-  override val tableName = "urls"
 
-  def apply(): UrlsDb = 
-    new UrlsDb("", "", "", true, 0)
+  def apply(): UrlsDb = new UrlsDb
 
-  def apply(u: ResultName[UrlsDb])(rs: WrappedResultSet): UrlsDb = 
+  def apply(u: SyntaxProvider[UrlsDb])(rs: WrappedResultSet): UrlsDb =
     new UrlsDb(
       rs.string(u.shortUrl),
       rs.string(u.secretKey),
@@ -80,6 +79,3 @@ object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
       rs.boolean(u.isActive),
       rs.int(u.clicks)
     )
-
-  def apply(u: SyntaxProvider[UrlsDb])(rs: WrappedResultSet): UrlsDb =
-    apply(u.resultName)(rs)  
