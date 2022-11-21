@@ -3,65 +3,47 @@ package com.simonplewis.mentorship.models
 import scalikejdbc.*
 import com.simonplewis.mentorship.routes.*
 
-case class UrlsDb(
-  shortUrl: String = "",
-  secretKey: String = "",
-  targetUrl: String = "",
-  isActive: Boolean = true,
-  clicks: Int = 0
-) extends SQLSyntaxSupport[UrlsDb]:
+class UrlsDb(
+  val shortUrl: String = "",
+  val secretKey: String = "",
+  val targetUrl: String = "",
+  val isActive: Boolean = true,
+  val clicks: Int = 0
+) extends SQLSyntaxSupport[UrlsDb] with PersistUrls:
 
   override val tableName = "urls"
 
-  def findTargetUrl(url: String): Option[UrlRecord] =
+  override def findTargetUrl(url: String): Option[UrlRecord] =
     DB readOnly { implicit session =>
-      val u = UrlsDb.syntax("u")
-
-      withSQL {
-        select
-        .from(UrlsDb as u)
-        .where.eq(u.targetUrl, url)
-      }
-      .map(UrlsDb(u)).single.apply()   
-      .map(res => UrlRecord(
-        res.shortUrl,
-        res.secretKey,
-        res.targetUrl,
-        res.isActive,
-        res.clicks)
-      )
+      sql"""
+          |SELECT short_url, secret_key, target_url, is_active, clicks
+          |FROM urls
+          |WHERE target_url = $url""".stripMargin
+      .map(rs => UrlsDb(rs)).single.apply()   
+      .map(r => UrlRecord(r.shortUrl, r.secretKey, r.targetUrl, r.isActive, r.clicks))
     } 
 
-  def findShortUrl(url: String): Option[UrlRecord] =
-    DB localTx { implicit session =>
-      val u = UrlsDb.syntax("u")
-
-      withSQL {
-        select
-        .from(UrlsDb as u)
-        .where.eq(u.shortUrl, url)
-      }
-      .map(UrlsDb(u)).single.apply()
-      .map(res => UrlRecord(
-        res.shortUrl,
-        res.secretKey,
-        res.targetUrl,
-        res.isActive,
-        res.clicks)
-      )
+  override def findShortUrl(url: String): Option[UrlRecord] =
+    DB readOnly { implicit session => 
+      sql"""
+          |SELECT short_url, secret_key, target_url, is_active, clicks
+          |FROM urls
+          |WHERE short_url = $url""".stripMargin
+      .map(rs => UrlsDb(rs)).single.apply()
+      .map(r => UrlRecord(r.shortUrl, r.secretKey, r.targetUrl, r.isActive, r.clicks))
   }   
 
-  def newUrl(urlRecord: ValidUrl): ValidUrl =
+  override def newUrl(urlRecord: ValidUrl): ValidUrl =
     urlRecord match
       case Left(_) => urlRecord
       case Right(u) =>   
         try
           DB localTx { implicit session =>
-            withSQL {
-              insert.into(UrlsDb)
-                .columns(column.shortUrl, column.secretKey, column.targetUrl, column.isActive, column.clicks)
-                .values(u.shortUrl, u.secretKey, u.targetUrl, true, 0)
-            }.update.apply()
+            sql"""
+                  |INSERT INTO urls
+                  |  (short_url, secret_key, target_url, is_active, clicks)
+                  |VALUES (${u.shortUrl}, ${u.secretKey}, ${u.targetUrl}, true, 0)""".stripMargin
+            .update.apply()
             Right(u)  
           }
         catch 
@@ -69,13 +51,14 @@ case class UrlsDb(
 
 object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
 
+  ConnectionPool.singleton("jdbc:mysql://127.0.0.1:3306/PersonDB", "simon", "password")
+
   def apply(): UrlsDb = new UrlsDb
 
-  def apply(u: SyntaxProvider[UrlsDb])(rs: WrappedResultSet): UrlsDb =
-    new UrlsDb(
-      rs.string(u.shortUrl),
-      rs.string(u.secretKey),
-      rs.string(u.targetUrl),
-      rs.boolean(u.isActive),
-      rs.int(u.clicks)
-    )
+  def apply(rs: WrappedResultSet) = new UrlsDb(
+    rs.string("short_url"),
+    rs.string("secret_key"),
+    rs.string("target_url"),
+    rs.boolean("is_active"),
+    rs.int("clicks")
+  )

@@ -6,8 +6,6 @@ import org.http4s.blaze.server.BlazeServerBuilder
 
 object Main extends IOApp:
 
-  ConnectionPool.singleton("jdbc:mysql://127.0.0.1:3306/PersonDB", "simon", "password")
-
   override def run(args: List[String]): IO[ExitCode] = 
 
     val mentorshipApp = MentorshipServer.allRoutesComplete[IO]

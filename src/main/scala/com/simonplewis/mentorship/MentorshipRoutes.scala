@@ -19,7 +19,7 @@ import com.simonplewis.mentorship.models.UrlRecord
 
 object MentorshipRoutes:
 
-  def urlRoutes[F[_] : Concurrent](using db: UrlsDb): HttpRoutes[F] =
+  def urlRoutes[F[_] : Concurrent](using db: PersistUrls): HttpRoutes[F] =
     val dsl = Http4sDsl[F]
     import dsl._
     implicit val decoder:EntityDecoder[IO, ShortenUrlRequest] = jsonOf[IO, ShortenUrlRequest]
