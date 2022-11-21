@@ -1,85 +1,64 @@
 package com.simonplewis.mentorship.models
 
-import java.time.{LocalDate, ZonedDateTime}
 import scalikejdbc.*
+import com.simonplewis.mentorship.routes.*
 
-case class UrlsDb(
-  shortUrl: String,
-  secretKey: String,
-  targetUrl: String,
-  isActive: Boolean,
-  clicks: Int
-) extends SQLSyntaxSupport[UrlsDb]:
+class UrlsDb(
+  val shortUrl: String = "",
+  val secretKey: String = "",
+  val targetUrl: String = "",
+  val isActive: Boolean = true,
+  val clicks: Int = 0
+) extends SQLSyntaxSupport[UrlsDb] with PersistUrls:
 
   override val tableName = "urls"
 
-  def findTargetUrl(url: String) =
-    DB localTx { implicit session =>
-      val u = UrlsDb.syntax("u")
-
-      withSQL {
-        select
-        .from(UrlsDb as u)
-        .where.eq(u.targetUrl, url)
-      }.map(UrlsDb(u)).single.apply()   
+  override def findTargetUrl(url: String): Option[UrlRecord] =
+    DB readOnly { implicit session =>
+      sql"""
+          |SELECT short_url, secret_key, target_url, is_active, clicks
+          |FROM urls
+          |WHERE target_url = $url""".stripMargin
+      .map(rs => UrlsDb(rs)).single.apply()   
+      .map(r => UrlRecord(r.shortUrl, r.secretKey, r.targetUrl, r.isActive, r.clicks))
     } 
 
-  def findShortUrl(url: String) =
-  DB localTx { implicit session =>
-    val u = UrlsDb.syntax("u")
-
-    withSQL {
-      select
-      .from(UrlsDb as u)
-      .where.eq(u.shortUrl, url)
-    }.map(UrlsDb(u)).single.apply()   
+  override def findShortUrl(url: String): Option[UrlRecord] =
+    DB readOnly { implicit session => 
+      sql"""
+          |SELECT short_url, secret_key, target_url, is_active, clicks
+          |FROM urls
+          |WHERE short_url = $url""".stripMargin
+      .map(rs => UrlsDb(rs)).single.apply()
+      .map(r => UrlRecord(r.shortUrl, r.secretKey, r.targetUrl, r.isActive, r.clicks))
   }   
 
-  // def updateClicks(shortUrl: String, clicks: Int) =
-  //   DB localTx { implicit session =>
-  //     sql"""
-  //         |UPDATE urls
-  //         |SET clicks = clicks + 1
-  //         |WHERE short_url = $shortUrl""".stripMargin
-  //     .update.apply()
-  //   }
-
-  // def setActive(shortUrl: String, isActive: Boolean) = 
-  //   DB localTx { implicit session =>
-  //     sql"""
-  //         |UPDATE urls
-  //         |SET is_active = ${isActive.toString}
-  //         |WHERE short_url = $shortUrl""".stripMargin
-  //     .update.apply()
-  //   }
-
-  def newUrl(shortUrl: String, secretKey: String, targetUrl: String) =
-    try
-      DB localTx { implicit session =>
-        withSQL {
-          insert.into(UrlsDb)
-            .columns(column.shortUrl, column.secretKey, column.targetUrl, column.isActive, column.clicks)
-            .values(shortUrl, secretKey, targetUrl, true, 0)
-        }.update.apply()
-        ()  
-      }
-    catch 
-      case e: Exception => e.toString
+  override def newUrl(urlRecord: ValidUrl): ValidUrl =
+    urlRecord match
+      case Left(_) => urlRecord
+      case Right(u) =>   
+        try
+          DB localTx { implicit session =>
+            sql"""
+                  |INSERT INTO urls
+                  |  (short_url, secret_key, target_url, is_active, clicks)
+                  |VALUES (${u.shortUrl}, ${u.secretKey}, ${u.targetUrl}, true, 0)""".stripMargin
+            .update.apply()
+            Right(u)  
+          }
+        catch 
+          case e: Exception => Left(DbError(e.toString))
 
 object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
-  override val tableName = "urls"
 
-  def apply(): UrlsDb = 
-    new UrlsDb("", "", "", true, 0)
+  ConnectionPool.singleton("jdbc:mysql://127.0.0.1:3306/PersonDB", "simon", "password")
 
-  def apply(u: ResultName[UrlsDb])(rs: WrappedResultSet): UrlsDb = 
-    new UrlsDb(
-      rs.string(u.shortUrl),
-      rs.string(u.secretKey),
-      rs.string(u.targetUrl),
-      rs.boolean(u.isActive),
-      rs.int(u.clicks)
-    )
+  def apply(): UrlsDb = new UrlsDb
 
-  def apply(u: SyntaxProvider[UrlsDb])(rs: WrappedResultSet): UrlsDb =
-    apply(u.resultName)(rs)  
+  def apply(rs: WrappedResultSet) = new UrlsDb(
+    rs.string("short_url"),
+    rs.string("secret_key"),
+    rs.string("target_url"),
+    rs.boolean("is_active"),
+    rs.int("clicks")
+  )
