@@ -1,10 +1,11 @@
-package com.simonplewis.mentorship
+package com.simonplewis.mentorship.test
 
 import scalikejdbc.*
 import cats.effect.*
 import org.http4s.blaze.server.BlazeServerBuilder
+import com.simonplewis.mentorship.MentorshipServer
 
-val persistUrl = com.simonplewis.mentorship.models.UrlsDb()
+val persistUrl = com.simonplewis.mentorship.test.models.UrlsMockDb()
 
 object Main extends IOApp:
 
