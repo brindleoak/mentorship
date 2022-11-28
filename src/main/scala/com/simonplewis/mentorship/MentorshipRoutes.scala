@@ -1,7 +1,7 @@
 package com.simonplewis.mentorship
 
-import com.simonplewis.mentorship.routes.*
-import com.simonplewis.mentorship.models.*
+import com.simonplewis.mentorship.routes.{UrlShortenService, ShortenUrlRequest, ShortenUrlResponse}
+import com.simonplewis.mentorship.models.{UrlInvalid, UrlRecord}
 
 import cats.effect.*
 import cats.implicits.*
@@ -14,15 +14,16 @@ import org.http4s.dsl.Http4sDsl
 import org.http4s.circe.*
 import org.http4s.circe.CirceEntityDecoder.*
 import org.http4s.headers.Location
-import com.simonplewis.mentorship.models.UrlRecord
+
+//import com.simonplewis.mentorship.models.UrlRecord
 
 
-object MentorshipRoutes:
+class MentorshipRoutes(urlShortner: UrlShortenService):
 
-  def urlRoutes[F[_] : Concurrent](using db: PersistUrls): HttpRoutes[F] =
+  def shortenUrlRoutes[F[_] : Concurrent]: HttpRoutes[F] =
     val dsl = Http4sDsl[F]
     import dsl._
-    implicit val decoder:EntityDecoder[IO, ShortenUrlRequest] = jsonOf[IO, ShortenUrlRequest]
+
     HttpRoutes.of[F] {
       case GET -> Root =>
         Ok("Hello, World!")
@@ -35,9 +36,9 @@ object MentorshipRoutes:
             case Left(e) => Left(UrlInvalid(e.sanitized))
             case Right(u) => Right(UrlRecord(targetUrl = u.renderString))
 
-          urlShortener = UrlShortener.shortenUrl(urlRecord) 
+          shortenUrlResult = urlShortner.shortenUrl(urlRecord) 
            
-          result <- urlShortener match
+          result <- shortenUrlResult match
             case Left(e) => BadRequest(e.description)
             case Right(u) => 
               val shortenUrlResponse = ShortenUrlResponse(
@@ -53,7 +54,10 @@ object MentorshipRoutes:
 
       case GET -> Root / shortUrl  =>
         val urlRecord = UrlRecord(shortUrl = shortUrl)
-        UrlShortener.lookupShortUrl(urlRecord) match
+        urlShortner.lookupShortUrl(urlRecord) match
           case Left(e) => BadRequest(e.description)
           case Right(u) => Found(Location(Uri.unsafeFromString(u.targetUrl)))   
     }  
+
+object MentorshipRoutes:
+  implicit val decoder:EntityDecoder[IO, ShortenUrlRequest] = jsonOf[IO, ShortenUrlRequest]

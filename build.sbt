@@ -7,6 +7,7 @@ val LogBackVersion = "1.4.4"
 val MySqlVersion = "8.0.30"
 val CirceVersion = "0.14.0"
 val CatsEffectVersion = "3.2.0"
+val t = 0
 
 lazy val root = (project in file("."))
   .settings(
@@ -30,3 +31,4 @@ lazy val root = (project in file("."))
     ),
     testFrameworks += new TestFramework("munit.Framework")
   )
+

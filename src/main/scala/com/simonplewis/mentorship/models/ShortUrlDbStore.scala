@@ -3,13 +3,18 @@ package com.simonplewis.mentorship.models
 import scalikejdbc.*
 import com.simonplewis.mentorship.routes.*
 
-class UrlsDb(
+trait ShortUrlStore:
+  def findTargetUrl(url: String): Option[UrlRecord]
+  def findShortUrl(url: String): Option[UrlRecord]
+  def newUrl(urlRecord: ValidUrl): ValidUrl
+  
+class ShortUrlDbStore(
   val shortUrl: String = "",
   val secretKey: String = "",
   val targetUrl: String = "",
   val isActive: Boolean = true,
   val clicks: Int = 0
-) extends SQLSyntaxSupport[UrlsDb] with PersistUrls:
+) extends SQLSyntaxSupport[ShortUrlDbStore] with ShortUrlStore:
 
   override val tableName = "urls"
 
@@ -19,7 +24,7 @@ class UrlsDb(
           |SELECT short_url, secret_key, target_url, is_active, clicks
           |FROM urls
           |WHERE target_url = $url""".stripMargin
-      .map(rs => UrlsDb(rs)).single.apply()   
+      .map(rs => ShortUrlDbStore(rs)).single.apply()   
       .map(r => UrlRecord(r.shortUrl, r.secretKey, r.targetUrl, r.isActive, r.clicks))
     } 
 
@@ -29,7 +34,7 @@ class UrlsDb(
           |SELECT short_url, secret_key, target_url, is_active, clicks
           |FROM urls
           |WHERE short_url = $url""".stripMargin
-      .map(rs => UrlsDb(rs)).single.apply()
+      .map(rs => ShortUrlDbStore(rs)).single.apply()
       .map(r => UrlRecord(r.shortUrl, r.secretKey, r.targetUrl, r.isActive, r.clicks))
   }   
 
@@ -49,13 +54,13 @@ class UrlsDb(
         catch 
           case e: Exception => Left(DbError(e.toString))
 
-object UrlsDb extends SQLSyntaxSupport[UrlsDb]:
+object ShortUrlDbStore extends SQLSyntaxSupport[ShortUrlDbStore]:
 
   ConnectionPool.singleton("jdbc:mysql://127.0.0.1:3306/PersonDB", "simon", "password")
 
-  def apply(): UrlsDb = new UrlsDb
+  def apply(): ShortUrlDbStore = new ShortUrlDbStore
 
-  def apply(rs: WrappedResultSet) = new UrlsDb(
+  def apply(rs: WrappedResultSet) = new ShortUrlDbStore(
     rs.string("short_url"),
     rs.string("secret_key"),
     rs.string("target_url"),

@@ -4,13 +4,13 @@ import com.simonplewis.mentorship.routes.*
 import com.simonplewis.mentorship.models.*
 import com.simonplewis.mentorship.models.UrlRecord.*
 
-class UrlsMockDb(
+class ShortUrlMockStore(
   val shortUrl: String = "",
   val secretKey: String = "",
   val targetUrl: String = "",
   val isActive: Boolean = true,
   val clicks: Int = 0
-) extends PersistUrls:
+) extends ShortUrlStore:
 
   override def findTargetUrl(url: String): Option[UrlRecord] =
     url match
@@ -24,6 +24,6 @@ class UrlsMockDb(
 
   override def newUrl(urlRecord: ValidUrl): ValidUrl = urlRecord
 
-object UrlsMockDb:
+object ShortUrlMockStore:
 
-  def apply(): UrlsMockDb = new UrlsMockDb
+  def apply(): ShortUrlMockStore = new ShortUrlMockStore
