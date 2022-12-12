@@ -20,7 +20,7 @@ object Dependencies:
   val mentorshipApp = mentorshipRoutesComplete[IO]
 
   val bladeServerBuilder = BlazeServerBuilder[IO]
-    .bindHttp(8080, "localhost")
+    .bindHttp(8081, "localhost")
     .withHttpApp(mentorshipApp)
     .resource
     .use(_ => IO.never)

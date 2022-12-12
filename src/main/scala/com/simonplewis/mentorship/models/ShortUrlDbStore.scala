@@ -2,11 +2,12 @@ package com.simonplewis.mentorship.models
 
 import scalikejdbc.*
 import com.simonplewis.mentorship.routes.*
+import cats.effect.IO
 
 trait ShortUrlStore:
   def findTargetUrl(url: String): Option[UrlRecord]
   def findShortUrl(url: String): Option[UrlRecord]
-  def newUrl(urlRecord: ValidUrl): ValidUrl
+  def newUrl(urlRecord: ValidUrl): IO[ValidUrl]
   
 class ShortUrlDbStore(
   val shortUrl: String = "",
@@ -38,9 +39,9 @@ class ShortUrlDbStore(
       .map(r => UrlRecord(r.shortUrl, r.secretKey, r.targetUrl, r.isActive, r.clicks))
   }   
 
-  override def newUrl(urlRecord: ValidUrl): ValidUrl =
+  override def newUrl(urlRecord: ValidUrl): IO[ValidUrl] =
     urlRecord match
-      case Left(_) => urlRecord
+      case Left(_) => IO.pure(urlRecord)
       case Right(u) =>   
         try
           DB localTx { implicit session =>
@@ -49,10 +50,10 @@ class ShortUrlDbStore(
                   |  (short_url, secret_key, target_url, is_active, clicks)
                   |VALUES (${u.shortUrl}, ${u.secretKey}, ${u.targetUrl}, true, 0)""".stripMargin
             .update.apply()
-            Right(u)  
+            IO.pure(Right(u))  
           }
         catch 
-          case e: Exception => Left(DbError(e.toString))
+          case e: Exception => IO.pure(Left(DbError(e.toString)))
 
 object ShortUrlDbStore extends SQLSyntaxSupport[ShortUrlDbStore]:
 

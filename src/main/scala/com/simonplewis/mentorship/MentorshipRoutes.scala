@@ -15,9 +15,6 @@ import org.http4s.circe.*
 import org.http4s.circe.CirceEntityDecoder.*
 import org.http4s.headers.Location
 
-//import com.simonplewis.mentorship.models.UrlRecord
-
-
 class MentorshipRoutes(urlShortner: UrlShortenService):
 
   def shortenUrlRoutes[F[_] : Concurrent]: HttpRoutes[F] =

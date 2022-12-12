@@ -6,7 +6,7 @@ type ValidUrl = Either[UrlFailure, UrlRecord]
 trait ValidatedUrl:
   def isValid(): Boolean
 
-class UrlRecord(
+case class UrlRecord(
   val shortUrl: String = "",
   val secretKey: String = "",
   val targetUrl: String = "",

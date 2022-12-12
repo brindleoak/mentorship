@@ -9,3 +9,4 @@ object Main extends IOApp:
   Dependencies.bladeServerBuilder
       .as(ExitCode.Success)
 
+end Main

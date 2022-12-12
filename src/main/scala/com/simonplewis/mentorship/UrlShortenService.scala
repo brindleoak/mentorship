@@ -1,7 +1,9 @@
 package com.simonplewis.mentorship.routes
 
 import com.simonplewis.mentorship.models.*
+import com.simonplewis.mentorship.models.UrlRecord.*
 import scala.util.Random
+import cats.effect.unsafe.implicits.global
       
 class UrlShortenService(db: ShortUrlStore):
   def targetUrlAlreadyShortened(urlRecord: ValidUrl): ValidUrl =
@@ -26,7 +28,7 @@ class UrlShortenService(db: ShortUrlStore):
             )
           ))
 
-        db.newUrl(newUrlRecord)
+        db.newUrl(newUrlRecord).unsafeRunSync()
 
   def lookupShortUrl(urlRecord: UrlRecord): ValidUrl =
     db.findShortUrl(urlRecord.shortUrl) match
